@@ -6,8 +6,9 @@
     css = [(css || 'menu clearfix')].flatten.join(' ')
     hide_children = Refinery::Core.menu_hide_children if hide_children.nil?
 -%>
-<nav id='<%= dom_id %>' class='<%= css %>'>
-  <ul class="sf-menu">
+<!-- <nav id='<%= dom_id %>' class='<%= css %>'> -->
+<nav id='<%= dom_id %>' class='topmenu'>
+  <ul class="menu custom fade">
     <%= render :partial => '/refinery/menu_branch', :collection => roots,
                :locals => {
                  :hide_children => hide_children,

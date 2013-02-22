@@ -12,7 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.ui.all
 //= require superfish
 //= require hoverIntent
 //= require_tree .
 
+$(document).ready(function () {
+    $("#accordion").accordion({ collapsible: true });
+});
