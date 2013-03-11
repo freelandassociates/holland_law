@@ -1,45 +1,7 @@
 <div id="sidemenu">
-	<!-- This is where the side menu will go -->
-	<%= #render :partial => "refinery/menu", :locals => {
-    	# :roots => Refinery::Menu.new(Refinery::Page.fast_menu.where(:parent_id => @page.root.id))
-    	%>
-    	<div id="accordion">
-    		<h3>Contact Us</h3>
-    		<div>
-    			<p>
-    				Click on a name below to email:
-    				<br/><a href="mailto:holland12@mac.com?Subject=Contact%20from%20website">John</a>
-    				<br/><a href="mailto:holland12@mac.com?Subject=Contact%20from%20website">Toni</a>
-    				<br/><a href="mailto:holland12@mac.com?Subject=Contact%20from%20website">Denece</a>
-    				<br/><a href="mailto:holland12@mac.com?Subject=Contact%20from%20website">Tanya</a>
-    			</p>
-    		</div>
-    		<h3>Place Order</h3>
-    		<div>
-    			<p>
-    			Click here to place order.	
-    			</p>
-    		</div>
-    		<h3>Rate Calculators</h3>
-    		<div>
-    			<p>
-    				Click on one of the rate calculators listed below:
-    			</p>
-    		</div>
-    		<h3>About Lawyers Title</h3>
-    		<div>
-    			<p>
-    				Information about Laywers Title
-    			</p>
-    		</div>
-    		<h3>Information Library</h3>
-    		<div>
-    			<p>
-    				
-    			</p>
-    		</div>  	
-    	</div>
-    </div>
-    <div id="refineryPageRender">
-    	<%= render '/refinery/content_page' %>
-    </div>
+    <%= render '/refinery/side_menu' %>
+</div>
+
+<div id="refineryPageRender">
+    <%= render '/refinery/content_page' %>
+</div>

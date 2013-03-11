@@ -19,4 +19,13 @@
 
 $(document).ready(function () {
     $("#accordion").accordion({ collapsible: true });
+    if (window.location.href.indexOf("rate-calculators")>-1) {
+    	$("#accordion").accordion({ active: 2});
+    } else if (window.location.href.indexOf("title-information")>-1) {
+		$("#accordion").accordion({ active: 3});
+	} else if (window.location.href.indexOf("information-library")>-1) {
+		$("#accordion").accordion({ active: 4});
+	} else {
+		$("#accordion").accordion({ active: 0});
+	}
 });

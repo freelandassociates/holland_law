@@ -99,19 +99,21 @@ h1, h2, h3 {
   color: #000000;
   font-weight: bold;
   position: relative;
-  padding: 10px 43px;
+  padding: 20px 43px;
   margin: 0;
   font-size: 32px;
-  height: 130px;
-  background-image: url(/assets/header.png);
+  height: 120px;
+  // background-image: url(/assets/header.png);
+  background-image: url(/assets/blueheader.jpg);
   background-repeat: no-repeat;
   // background-position: right;
   background-size: 1024px 160px;
 }
 
 #logo a {
-  color: $dark;
+  color: $light;
   text-decoration: none;
+  font-weight: lighter;
 }
 
 #menu ul li {
@@ -140,12 +142,13 @@ h1, h2, h3 {
 
 #accordion p {
   margin: 5px;
-  font-size: 12px;
+  font-size: 11px;
 }
 
 #refineryPageRender {
-  padding-left: 20px;
-  padding-right: 10px;
-  width: 715px;
+  padding-top: 10px;
+  padding-left: 40px;
+  padding-right: 20px;
+  width: 685px;
   float: left;
 }
