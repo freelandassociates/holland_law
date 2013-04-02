@@ -29,55 +29,54 @@ function calc(val,factor,putin) {
 
 <style type="text/css">
 body {
-	background-color: #000000;
-	background-image:url(images/background.jpg);
-	background-position:top right;
-	background-repeat:no-repeat;
+  /*background-color: #000000;*/
+  background-image:url(images/background.jpg);
+  background-position:top right;
+  background-repeat:no-repeat;
 }
 
 table.calc {
-	background-color:#fff7c6;
-	padding:10px;
-	width:600px;
-	height:100%;
-	
+  /*background-color:#fff7c6;*/
+  padding:10px;
+  width:600px;
+  height:100%;
+  
 }
 
 table.content {
-	background-color:#fff7c6;
-	padding:10px;
-	width:600px;
-	height:100%;
-	
+  /*background-color:#fff7c6;*/
+  padding:10px;
+  width:600px;
+  height:100%;
+  
 }
 
 table.calchead {
-	width:600px;
-	height:25;
+  width:600px;
+  height:25;
 }
 table.calcfoot {
-	width:600px;
-	height:45;
+  width:600px;
+  height:45;
 }
 </style>
 </head>
 
 <body>
-<table class="calchead"><img src="images/calchead.png" /></table>
 <table class="content">
         <tr> 
-          <td><b><div align="justify"><font face="Arial, Helvetcia, sans serif" size="2"><u>Basic Rate Calculator</u></font></b><br /><br />
-              <font face="Arial" size="4">The following Title Insurance Premium Rates are 
+          <td><b><div align="justify"><u>Basic Rate Calculator</u></b><br /><br />
+              <p>The following Title Insurance Premium Rates are 
               based on the sale price of the property and are set by the Department 
               of Insurance for the State of Texas. Additional premium costs may 
-              be charged in conjunction with a lender transaction.</font>
-			  
-              <font face="Arial" size="4">Please 
-              be sure to enter an amount of at least 10000.  This is the minimum amount for which the State of Texas will issue a policy.</font></div>
+              be charged in conjunction with a lender transaction.</p>
+        
+              <p>Please 
+              be sure to enter an amount of at least 10000.  This is the minimum amount for which the State of Texas will issue a policy.</p></div>
               </td>
               </tr>
               </table>
-			  <SCRIPT language=JavaScript>
+        <SCRIPT language=JavaScript>
 
 
 function calculateRate(){
@@ -100,14 +99,14 @@ function basic_premium(value){
 
 
  if( (value > 0) & (value <= 9999))
-	    { premium = alert("The state of Texas does not issue policies less than 10000");
+      { premium = alert("The state of Texas does not issue policies less than 10000");
       window.location.href = "btpc.html";
     }
     
 
 
 if( (value > 0) & (value <= 9999))
-	    { premium = 0;
+      { premium = 0;
     }  
     
     
@@ -119,12 +118,12 @@ if( (value > 0) & (value <= 9999))
 }
 
 if( !validateNumeric(value))
-	    { premium = alert("Please enter the value in whole dollar ammount without commas or decimals");
+      { premium = alert("Please enter the value in whole dollar ammount without commas or decimals");
       window.location.href = "btpc.html";
     }   
     
  if( !validateNumeric(value))
-	    { premium = 0;
+      { premium = 0;
     }   
 
 
@@ -142,7 +141,7 @@ if( !validateNumeric(value))
        {  overmin = ((229)); 
        premium = (overmin);
     }
-	else if ( (value >= 10001) & (value <= 10500) )
+  else if ( (value >= 10001) & (value <= 10500) )
        {  overmin = ((233)); 
        premium = (overmin);
     }
@@ -151,159 +150,159 @@ if( !validateNumeric(value))
        {  overmin = ((235)); 
        premium = (overmin);
     }
- 	else if ( (value >= 11001) & (value <= 11500) )
+  else if ( (value >= 11001) & (value <= 11500) )
        {  overmin = ((239)); 
        premium = (overmin);
     }
-	else if ( (value >= 11501) & (value <= 12000) )
+  else if ( (value >= 11501) & (value <= 12000) )
        {  overmin = ((243)); 
        premium = (overmin);
     }
-	else if ( (value >= 12001) & (value <= 12500) )
+  else if ( (value >= 12001) & (value <= 12500) )
        {  overmin = ((246)); 
        premium = (overmin);
     }
-	else if ( (value >= 12501) & (value <= 13000) )
+  else if ( (value >= 12501) & (value <= 13000) )
        {  overmin = ((250)); 
        premium = (overmin);
     }
-	else if ( (value >= 13001) & (value <= 13500) )
+  else if ( (value >= 13001) & (value <= 13500) )
        {  overmin = ((254)); 
        premium = (overmin);
     }
-	else if ( (value >= 13501) & (value <= 14000) )
+  else if ( (value >= 13501) & (value <= 14000) )
        {  overmin = ((257)); 
        premium = (overmin);
     }
-	else if ( (value >= 14001) & (value <= 14500) )
+  else if ( (value >= 14001) & (value <= 14500) )
        {  overmin = ((260)); 
        premium = (overmin);
     }
-	else if ( (value >= 14501) & (value <= 15000) )
+  else if ( (value >= 14501) & (value <= 15000) )
        {  overmin = ((262)); 
        premium = (overmin);
     }
-	else if ( (value >= 15001) & (value <= 15500) )
+  else if ( (value >= 15001) & (value <= 15500) )
        {  overmin = ((266)); 
        premium = (overmin);
     }
-	else if ( (value >= 15501) & (value <= 16000) )
+  else if ( (value >= 15501) & (value <= 16000) )
        {  overmin = ((270)); 
        premium = (overmin);
     }
-	else if ( (value >= 16001) & (value <= 16500) )
+  else if ( (value >= 16001) & (value <= 16500) )
        {  overmin = ((274)); 
        premium = (overmin);
     }
-	else if ( (value >= 16501) & (value <= 17000) )
+  else if ( (value >= 16501) & (value <= 17000) )
        {  overmin = ((277)); 
        premium = (overmin);
     }
-	else if ( (value >= 17001) & (value <= 17500) )
+  else if ( (value >= 17001) & (value <= 17500) )
        {  overmin = ((281)); 
        premium = (overmin);
     }
-	else if ( (value >= 17501) & (value <= 18000) )
+  else if ( (value >= 17501) & (value <= 18000) )
        {  overmin = ((285)); 
        premium = (overmin);
     }
-	else if ( (value >= 18001) & (value <= 18500) )
+  else if ( (value >= 18001) & (value <= 18500) )
        {  overmin = ((287)); 
        premium = (overmin);
     }
-	else if ( (value >= 18501) & (value <= 19000) )
+  else if ( (value >= 18501) & (value <= 19000) )
        {  overmin = ((290)); 
        premium = (overmin);
     }
-	else if ( (value >= 19001) & (value <= 19500) )
+  else if ( (value >= 19001) & (value <= 19500) )
        {  overmin = ((293)); 
        premium = (overmin);
     }
-	else if ( (value >= 19501) & (value <= 20000) )
+  else if ( (value >= 19501) & (value <= 20000) )
        {  overmin = ((298)); 
        premium = (overmin);
     }
-	else if ( (value >= 20001) & (value <= 20500) )
+  else if ( (value >= 20001) & (value <= 20500) )
        {  overmin = ((301)); 
        premium = (overmin);
     }
-	else if ( (value >= 20501) & (value <= 21000) )
+  else if ( (value >= 20501) & (value <= 21000) )
        {  overmin = ((305)); 
        premium = (overmin);
     }
-	else if ( (value >= 21001) & (value <= 21500) )
+  else if ( (value >= 21001) & (value <= 21500) )
        {  overmin = ((308)); 
        premium = (overmin);
     }
-	else if ( (value >= 21501) & (value <= 22000) )
+  else if ( (value >= 21501) & (value <= 22000) )
        {  overmin = ((312)); 
        premium = (overmin);
     }
-	else if ( (value >= 22001) & (value <= 22500) )
+  else if ( (value >= 22001) & (value <= 22500) )
        {  overmin = ((315)); 
        premium = (overmin);
     }
-	else if ( (value >= 22501) & (value <= 23000) )
+  else if ( (value >= 22501) & (value <= 23000) )
        {  overmin = ((318)); 
        premium = (overmin);
     }
-	else if ( (value >= 23001) & (value <= 23500) )
+  else if ( (value >= 23001) & (value <= 23500) )
        {  overmin = ((321)); 
        premium = (overmin);
     }
-	else if ( (value >= 23501) & (value <= 24000) )
+  else if ( (value >= 23501) & (value <= 24000) )
        {  overmin = ((325)); 
        premium = (overmin);
     }
-	else if ( (value >= 24001) & (value <= 24500) )
+  else if ( (value >= 24001) & (value <= 24500) )
        {  overmin = ((328)); 
        premium = (overmin);
     }
-	else if ( (value >= 24501) & (value <= 25000) )    
+  else if ( (value >= 24501) & (value <= 25000) )    
        {  overmin = ((332)); 
        premium = (overmin);
     }
-	else if ( (value >= 25001) & (value <= 25500) )
+  else if ( (value >= 25001) & (value <= 25500) )
        {  overmin = ((335)); 
        premium = (overmin);
     }
-	else if ( (value >= 25501) & (value <= 26000) )
+  else if ( (value >= 25501) & (value <= 26000) )
        {  overmin = ((339)); 
        premium = (overmin);
     }
-	else if ( (value >= 26001) & (value <= 26500) )
+  else if ( (value >= 26001) & (value <= 26500) )
        {  overmin = ((342)); 
        premium = (overmin);
     }
-	else if ( (value >= 26501) & (value <= 27000) )
+  else if ( (value >= 26501) & (value <= 27000) )
        {  overmin = ((345)); 
        premium = (overmin);
     }
-	else if ( (value >= 27001) & (value <= 27500) )
+  else if ( (value >= 27001) & (value <= 27500) )
        {  overmin = ((348)); 
        premium = (overmin);
     }
-	else if ( (value >= 27501) & (value <= 28000) )
+  else if ( (value >= 27501) & (value <= 28000) )
        {  overmin = ((352)); 
        premium = (overmin);
     }
-	else if ( (value >= 28001) & (value <= 28500) )
+  else if ( (value >= 28001) & (value <= 28500) )
        {  overmin = ((355)); 
        premium = (overmin);
     }
-	else if ( (value >= 28501) & (value <= 29000) )
+  else if ( (value >= 28501) & (value <= 29000) )
        {  overmin = ((359)); 
        premium = (overmin);
     }
-	else if ( (value >= 29001) & (value <= 29500) )
+  else if ( (value >= 29001) & (value <= 29500) )
        {  overmin = ((362)); 
        premium = (overmin);
     }
-	else if ( (value >= 29501) & (value <= 30000) )
+  else if ( (value >= 29501) & (value <= 30000) )
        {  overmin = ((366)); 
        premium = (overmin);
     }
-	else if ( (value >= 30001) & (value <= 30500) )
+  else if ( (value >= 30001) & (value <= 30500) )
        {  overmin = ((369)); 
        premium = (overmin);
     }
@@ -391,7 +390,7 @@ if( !validateNumeric(value))
        {  overmin = ((440)); 
        premium = (overmin);
     }
-	else if ( (value >= 41001) & (value <= 41500) )
+  else if ( (value >= 41001) & (value <= 41500) )
        {  overmin = ((445)); 
        premium = (overmin);
     }
@@ -623,7 +622,7 @@ if( !validateNumeric(value))
        {  overmin = ((640)); 
        premium = (overmin);
     }
- 	else if ( (value >= 70001) & (value <= 70500) )
+  else if ( (value >= 70001) & (value <= 70500) )
        {  overmin = ((644)); 
        premium = (overmin);
     }
@@ -703,7 +702,7 @@ if( !validateNumeric(value))
        {  overmin = ((707)); 
        premium = (overmin);
     }
-	else if ( (value >= 80001) & (value <= 80500) )
+  else if ( (value >= 80001) & (value <= 80500) )
        {  overmin = ((711)); 
        premium = (overmin);
     }
@@ -783,7 +782,7 @@ if( !validateNumeric(value))
        {  overmin = ((775)); 
        premium = (overmin);
     }
-	 else if ( (value >= 90001) & (value <= 90500) )
+   else if ( (value >= 90001) & (value <= 90500) )
        {  overmin = ((779)); 
        premium = (overmin);
     }
@@ -859,7 +858,7 @@ if( !validateNumeric(value))
        {  overmin = ((841)); 
        premium = (overmin);
     }
-	else if ( (value >= 99501) & (value <= 100000) )
+  else if ( (value >= 99501) & (value <= 100000) )
        {  overmin = ((843)); 
        premium = (overmin);
     }
@@ -912,9 +911,9 @@ if( !validateNumeric(value))
       s1 = s1+"00";
       
 {
-	
-	}
-	
+  
+  }
+  
 }
     return s1
 }
@@ -929,9 +928,9 @@ if( !validateNumeric(value))
                 </TD>
                 </TR>
               <tr> 
-                <TD colspan="4"><div align="right"><font size=2 face="Verdana">Do 
-                    not enter any currency symbols or commas<br></FONT></div>
-                    </TD>
+                <TD colspan="4"><div align="right">Do 
+                    not enter any currency symbols or commas<br></div>
+                    </TD
               </tr>
               <tr> 
                 <TD colspan="4"><font color="#006600" size="2" face="Verdana"> 
@@ -946,11 +945,11 @@ if( !validateNumeric(value))
                 </TD>
               </tr>
               <tr>
-                <TD><i><div align="center"><font size="3">Rate calculations are base on information 
+                <TD><i><div align="center">Rate calculations are base on information 
                     obtained from the Texas Department of Insurance.<br>
                     These rates are effective as of February 1, 2007 and are subject 
-                    to change each year.</font></i></div></TD>
+                    to change each year.</i></div></TD>
               </tr>
-            </table></FORM><table class="calchead"><img src="images/calcfoot.png" /></table>
+            </table></FORM>
 </body>
 </html>
