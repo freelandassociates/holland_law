@@ -2,18 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Capital Title Corinth - Law firm of John Holland - "Calculators"</title>
-<style type="text/css">
-<!--
-a:link {color: #888469;}
-a:visited {color: #c9c39e;}
-a:active {color: #c9c39e;}
-a:hover {color: #c03325;}
-a {text-decoration: none;}
--->
-</style>
 <script language="JavaScript"><!-- hide script
 //-- JavaScript code
-//-- Do the calculation based on three passed values.
+//-s Do the calculation based on three passed values.
 function calc(val,factor,putin) { 
    //--If null passed, convert to zero.
    if (val == "") {
@@ -26,57 +17,56 @@ function calc(val,factor,putin) {
 }
 // unhide script --></script>
 
-
+<style type="text/css">
+<!--
+a:link {color: #888469;}
+a:visited {color: #c9c39e;}
+a:active {color: #c9c39e;}
+a:hover {color: #c03325;}
+a {text-decoration: none;}
+-->
+</style> 
 <style type="text/css">
 body {
-  /*background-color: #000000;*/
-  background-image:url(images/background.jpg);
-  background-position:top right;
-  background-repeat:no-repeat;
+	/*background-color: #000000;*/
+	/*background-image:url(images/background.jpg);*/
+	background-position:top right;
+	background-repeat:no-repeat;
 }
 
 table.calc {
-  /*background-color:#fff7c6;*/
-  /*padding:10px;*/
-  width:100%;
-  height:100%;
-  
-}
-
-table.content {
-  /*background-color:#fff7c6;*/
-  /*padding:10px;*/
-  width:100%;
-  height:100%;
-  
+	/*background-color:#fff7c6;*/
+	padding:10px;
+	width:600px;
 }
 
 table.calchead {
-  width:600px;
-  height:25;
+	width:600px;
+	height:25;
 }
 table.calcfoot {
-  width:600px;
-  height:45;
+	wwidth:600px;
+	height:45;
 }
 </style>
 </head>
 
 <body>
-<table class="content">
-        <tr> 
-          <td><b><div align="justify"><u>Basic Rate Calculator</u></b><br /><br />
-              <p>The following Title Insurance Premium Rates are 
-              based on the sale price of the property and are set by the Department 
-              of Insurance for the State of Texas. Additional premium costs may 
-              be charged in conjunction with a lender transaction.</p>
-        
-              <p>Please 
-              be sure to enter an amount of at least 10000.  This is the minimum amount for which the State of Texas will issue a policy.</p></div>
-              </td>
-              </tr>
-              </table>
-        <SCRIPT language=JavaScript>
+<table class= "calc">
+  <tr> 
+    <td><div align="justify"><u><font size="6" face="Arial, Helvetica, sans-serif"><strong>Refinance 
+        Title Premium Calculator</strong></font></u><strong><font size="3" face="Arial, Helvetica, sans-serif"> 
+        </font></strong><font size="4" face="Arial, Helvetica, sans-serif"><br>
+        <br>
+        The following Title Insurance Premium Rates are based on the sale price 
+        of the property and are set by the Department of Insurance for the State 
+        of Texas. Additional premium costs may be charged in conjunction with 
+        a lender transaction. Please be sure to enter an amount of at least 10000. 
+        This is the minimum amount that a policy will be issued for by the State 
+        of Texas. </font> </div></td>
+
+  </tr>
+<script language=JavaScript>
 
 
 function calculateRate(){
@@ -86,27 +76,147 @@ function calculateRate(){
   insurancevalue = document.rateform.insurance.value;
   loan_Policy = basic_premium(insurancevalue);
  
-    document.rateform.Loan_Policy.value = "$" + loan_Policy;
+  document.rateform.Loan_Policy.value = "$" + loan_Policy;
+  document.rateform.T19.value = "$" + displaynum(loan_Policy * .05);
 
+  if(document.rateform.checkbox.checked == true)
+    document.rateform.hoa.value = "$" + displaynum(25);
+  else
+    document.rateform.hoa.value = "$" + displaynum(0);
+
+  if(document.rateform.checkbox2.checked == true)
+    document.rateform.ar.value = "$" + displaynum(20);
+  else
+    document.rateform.ar.value = "$" + displaynum(0);
+
+  if(document.rateform.checkbox3.checked == true)
+    document.rateform.bm.value = "$" + displaynum(25);
+  else
+    document.rateform.bm.value = "$" + displaynum(0);
+
+  if(document.rateform.checkbox4.checked == true)
+    document.rateform.he.value = "$" + displaynum(loan_Policy * .25);
+  else
+    document.rateform.he.value = "$" + displaynum(0);
+
+  document.rateform.prem.value = "$" + displaynum(
+                                 parseFloat(loan_Policy) +
+                                 parseFloat(currencyToNumber(document.rateform.T19.value)) +
+                                 parseFloat(currencyToNumber(document.rateform.se.value)) +
+                                 parseFloat(currencyToNumber(document.rateform.hoa.value)) +
+                                 parseFloat(currencyToNumber(document.rateform.ar.value)) +
+                                 parseFloat(currencyToNumber(document.rateform.bm.value)) +
+                                 parseFloat(currencyToNumber(document.rateform.he.value)));
+
+  insurancevalue = document.rateform.insurance2.value;
+  loan_Policy = basic_premium(insurancevalue);
+
+  document.rateform.a.value = "$" + displaynum(loan_Policy * .4);
+  document.rateform.b.value = "$" + displaynum(loan_Policy * .35);
+  document.rateform.c.value = "$" + displaynum(loan_Policy * .30);
+  document.rateform.d.value = "$" + displaynum(loan_Policy * .25);
+  document.rateform.e.value = "$" + displaynum(loan_Policy * .20);
+  document.rateform.f.value = "$" + displaynum(loan_Policy * .15);
+
+  document.rateform.Loan_Policy2.value = "$" + loan_Policy;
+
+  var testdate = new Date(document.rateform.olddate.value);
+  if (document.rateform.olddate.value != '') {
+    if ((! isValidDate(document.rateform.olddate.value)) || testdate.getFullYear() < 1000) {
+      alert("Enter the date in the format of 99/99/9999");
+      document.rateform.credit.value = "$0.00";
+    }
+    else if (testdate.getTime() > new Date().getTime()) {
+      alert("Date can not be in the future");
+      document.rateform.credit.value = "$0.00";
+    }
+    else {
+
+      var twoyears = new Date();
+      var threeyears = new Date();
+      var fouryears = new Date();
+      var fiveyears = new Date();
+      var sixyears = new Date();
+      var sevenyears = new Date();
+
+      twoyears.setYear(twoyears.getFullYear() - 2);
+      threeyears.setYear(threeyears.getFullYear() - 3);
+      fouryears.setYear(fouryears.getFullYear() - 4);
+      fiveyears.setYear(fiveyears.getFullYear() - 5);
+      sixyears.setYear(sixyears.getFullYear() - 6);
+      sevenyears.setYear(sevenyears.getFullYear() - 7);
+
+      if(testdate.getTime() > twoyears.getTime()) {
+	document.rateform.credit.value = document.rateform.a.value;
+      }
+      else if(testdate.getTime() > threeyears.getTime()) {
+	document.rateform.credit.value = document.rateform.b.value;
+      }
+      else if(testdate.getTime() > fouryears.getTime()) {
+	document.rateform.credit.value = document.rateform.c.value;
+      }
+      else if(testdate.getTime() > fiveyears.getTime()) {
+	document.rateform.credit.value = document.rateform.d.value;
+      }
+      else if(testdate.getTime() > sixyears.getTime()) {
+	document.rateform.credit.value = document.rateform.e.value;
+      }
+      else if(testdate.getTime() > sevenyears.getTime()) {
+	document.rateform.credit.value = document.rateform.f.value;
+      }
+      else {
+	document.rateform.credit.value = "$0.00";
+      }
+    }
+  }
+  else {
+    document.rateform.credit.value = "$0.00";
+  }
+     
+  document.rateform.revised.value = "$" + displaynum(
+                                    parseFloat(currencyToNumber(document.rateform.prem.value)) -
+                                    parseFloat(currencyToNumber(document.rateform.credit.value)))
+}
+
+function isValidDate(strDate){
+var dteDate;
+var day, month, year;
+var datePat = /^(\d{1,2})(\/)(\d{1,2})(\/)(\d{4})$/;
+var matchArray = strDate.match(datePat);
+
+if (matchArray == null)
+return false;
+
+day = matchArray[3]; // p@rse date into variables
+month = matchArray[1];
+year = matchArray[5];
+month--;
+
+dteDate=new Date(year,month,day);
+return ((day==dteDate.getDate()) && (month==dteDate.getMonth()) && (year==dteDate.getFullYear()));
+}
+
+function currencyToNumber(num) {
+  var num2 = num.replace("$", "");   
+  return num2;
+}
+
+function displaynum(num) {
+  num = (Math.round(num * 100) / 100).toFixed(2);
+  return num;
 }
      
 function basic_premium(value){
   var premium;
   var overmin;
 
-
-
-
-
  if( (value > 0) & (value <= 9999))
-      { premium = alert("The state of Texas does not issue policies less than 10000");
-      window.location.href = "btpc.html";
+	    { premium = alert("The state of Texas does not issue policies less than 10000");
+      //window.location.href = "rtpc.html";
     }
-    
-
 
 if( (value > 0) & (value <= 9999))
-      { premium = 0;
+	    { premium = 0;
     }  
     
     
@@ -118,30 +228,19 @@ if( (value > 0) & (value <= 9999))
 }
 
 if( !validateNumeric(value))
-      { premium = alert("Please enter the value in whole dollar ammount without commas or decimals");
-      window.location.href = "btpc.html";
+	    { premium = alert("Please enter the value in whole dollar ammount without commas or decimals");
+      //window.location.href = "rtpc.html";
     }   
     
  if( !validateNumeric(value))
-      { premium = 0;
+	    { premium = 0;
     }   
-
-
-       
-    
-    
-
-    
-    
-    
-    
-    
      
    else if ( (value >= 10000) & (value <= 10000) )
        {  overmin = ((229)); 
        premium = (overmin);
     }
-  else if ( (value >= 10001) & (value <= 10500) )
+	else if ( (value >= 10001) & (value <= 10500) )
        {  overmin = ((233)); 
        premium = (overmin);
     }
@@ -150,159 +249,159 @@ if( !validateNumeric(value))
        {  overmin = ((235)); 
        premium = (overmin);
     }
-  else if ( (value >= 11001) & (value <= 11500) )
+ 	else if ( (value >= 11001) & (value <= 11500) )
        {  overmin = ((239)); 
        premium = (overmin);
     }
-  else if ( (value >= 11501) & (value <= 12000) )
+	else if ( (value >= 11501) & (value <= 12000) )
        {  overmin = ((243)); 
        premium = (overmin);
     }
-  else if ( (value >= 12001) & (value <= 12500) )
+	else if ( (value >= 12001) & (value <= 12500) )
        {  overmin = ((246)); 
        premium = (overmin);
     }
-  else if ( (value >= 12501) & (value <= 13000) )
+	else if ( (value >= 12501) & (value <= 13000) )
        {  overmin = ((250)); 
        premium = (overmin);
     }
-  else if ( (value >= 13001) & (value <= 13500) )
+	else if ( (value >= 13001) & (value <= 13500) )
        {  overmin = ((254)); 
        premium = (overmin);
     }
-  else if ( (value >= 13501) & (value <= 14000) )
+	else if ( (value >= 13501) & (value <= 14000) )
        {  overmin = ((257)); 
        premium = (overmin);
     }
-  else if ( (value >= 14001) & (value <= 14500) )
+	else if ( (value >= 14001) & (value <= 14500) )
        {  overmin = ((260)); 
        premium = (overmin);
     }
-  else if ( (value >= 14501) & (value <= 15000) )
+	else if ( (value >= 14501) & (value <= 15000) )
        {  overmin = ((262)); 
        premium = (overmin);
     }
-  else if ( (value >= 15001) & (value <= 15500) )
+	else if ( (value >= 15001) & (value <= 15500) )
        {  overmin = ((266)); 
        premium = (overmin);
     }
-  else if ( (value >= 15501) & (value <= 16000) )
+	else if ( (value >= 15501) & (value <= 16000) )
        {  overmin = ((270)); 
        premium = (overmin);
     }
-  else if ( (value >= 16001) & (value <= 16500) )
+	else if ( (value >= 16001) & (value <= 16500) )
        {  overmin = ((274)); 
        premium = (overmin);
     }
-  else if ( (value >= 16501) & (value <= 17000) )
+	else if ( (value >= 16501) & (value <= 17000) )
        {  overmin = ((277)); 
        premium = (overmin);
     }
-  else if ( (value >= 17001) & (value <= 17500) )
+	else if ( (value >= 17001) & (value <= 17500) )
        {  overmin = ((281)); 
        premium = (overmin);
     }
-  else if ( (value >= 17501) & (value <= 18000) )
+	else if ( (value >= 17501) & (value <= 18000) )
        {  overmin = ((285)); 
        premium = (overmin);
     }
-  else if ( (value >= 18001) & (value <= 18500) )
+	else if ( (value >= 18001) & (value <= 18500) )
        {  overmin = ((287)); 
        premium = (overmin);
     }
-  else if ( (value >= 18501) & (value <= 19000) )
+	else if ( (value >= 18501) & (value <= 19000) )
        {  overmin = ((290)); 
        premium = (overmin);
     }
-  else if ( (value >= 19001) & (value <= 19500) )
+	else if ( (value >= 19001) & (value <= 19500) )
        {  overmin = ((293)); 
        premium = (overmin);
     }
-  else if ( (value >= 19501) & (value <= 20000) )
+	else if ( (value >= 19501) & (value <= 20000) )
        {  overmin = ((298)); 
        premium = (overmin);
     }
-  else if ( (value >= 20001) & (value <= 20500) )
+	else if ( (value >= 20001) & (value <= 20500) )
        {  overmin = ((301)); 
        premium = (overmin);
     }
-  else if ( (value >= 20501) & (value <= 21000) )
+	else if ( (value >= 20501) & (value <= 21000) )
        {  overmin = ((305)); 
        premium = (overmin);
     }
-  else if ( (value >= 21001) & (value <= 21500) )
+	else if ( (value >= 21001) & (value <= 21500) )
        {  overmin = ((308)); 
        premium = (overmin);
     }
-  else if ( (value >= 21501) & (value <= 22000) )
+	else if ( (value >= 21501) & (value <= 22000) )
        {  overmin = ((312)); 
        premium = (overmin);
     }
-  else if ( (value >= 22001) & (value <= 22500) )
+	else if ( (value >= 22001) & (value <= 22500) )
        {  overmin = ((315)); 
        premium = (overmin);
     }
-  else if ( (value >= 22501) & (value <= 23000) )
+	else if ( (value >= 22501) & (value <= 23000) )
        {  overmin = ((318)); 
        premium = (overmin);
     }
-  else if ( (value >= 23001) & (value <= 23500) )
+	else if ( (value >= 23001) & (value <= 23500) )
        {  overmin = ((321)); 
        premium = (overmin);
     }
-  else if ( (value >= 23501) & (value <= 24000) )
+	else if ( (value >= 23501) & (value <= 24000) )
        {  overmin = ((325)); 
        premium = (overmin);
     }
-  else if ( (value >= 24001) & (value <= 24500) )
+	else if ( (value >= 24001) & (value <= 24500) )
        {  overmin = ((328)); 
        premium = (overmin);
     }
-  else if ( (value >= 24501) & (value <= 25000) )    
+	else if ( (value >= 24501) & (value <= 25000) )    
        {  overmin = ((332)); 
        premium = (overmin);
     }
-  else if ( (value >= 25001) & (value <= 25500) )
+	else if ( (value >= 25001) & (value <= 25500) )
        {  overmin = ((335)); 
        premium = (overmin);
     }
-  else if ( (value >= 25501) & (value <= 26000) )
+	else if ( (value >= 25501) & (value <= 26000) )
        {  overmin = ((339)); 
        premium = (overmin);
     }
-  else if ( (value >= 26001) & (value <= 26500) )
+	else if ( (value >= 26001) & (value <= 26500) )
        {  overmin = ((342)); 
        premium = (overmin);
     }
-  else if ( (value >= 26501) & (value <= 27000) )
+	else if ( (value >= 26501) & (value <= 27000) )
        {  overmin = ((345)); 
        premium = (overmin);
     }
-  else if ( (value >= 27001) & (value <= 27500) )
+	else if ( (value >= 27001) & (value <= 27500) )
        {  overmin = ((348)); 
        premium = (overmin);
     }
-  else if ( (value >= 27501) & (value <= 28000) )
+	else if ( (value >= 27501) & (value <= 28000) )
        {  overmin = ((352)); 
        premium = (overmin);
     }
-  else if ( (value >= 28001) & (value <= 28500) )
+	else if ( (value >= 28001) & (value <= 28500) )
        {  overmin = ((355)); 
        premium = (overmin);
     }
-  else if ( (value >= 28501) & (value <= 29000) )
+	else if ( (value >= 28501) & (value <= 29000) )
        {  overmin = ((359)); 
        premium = (overmin);
     }
-  else if ( (value >= 29001) & (value <= 29500) )
+	else if ( (value >= 29001) & (value <= 29500) )
        {  overmin = ((362)); 
        premium = (overmin);
     }
-  else if ( (value >= 29501) & (value <= 30000) )
+	else if ( (value >= 29501) & (value <= 30000) )
        {  overmin = ((366)); 
        premium = (overmin);
     }
-  else if ( (value >= 30001) & (value <= 30500) )
+	else if ( (value >= 30001) & (value <= 30500) )
        {  overmin = ((369)); 
        premium = (overmin);
     }
@@ -390,7 +489,7 @@ if( !validateNumeric(value))
        {  overmin = ((440)); 
        premium = (overmin);
     }
-  else if ( (value >= 41001) & (value <= 41500) )
+	else if ( (value >= 41001) & (value <= 41500) )
        {  overmin = ((445)); 
        premium = (overmin);
     }
@@ -622,7 +721,7 @@ if( !validateNumeric(value))
        {  overmin = ((640)); 
        premium = (overmin);
     }
-  else if ( (value >= 70001) & (value <= 70500) )
+ 	else if ( (value >= 70001) & (value <= 70500) )
        {  overmin = ((644)); 
        premium = (overmin);
     }
@@ -702,7 +801,7 @@ if( !validateNumeric(value))
        {  overmin = ((707)); 
        premium = (overmin);
     }
-  else if ( (value >= 80001) & (value <= 80500) )
+	else if ( (value >= 80001) & (value <= 80500) )
        {  overmin = ((711)); 
        premium = (overmin);
     }
@@ -782,7 +881,7 @@ if( !validateNumeric(value))
        {  overmin = ((775)); 
        premium = (overmin);
     }
-   else if ( (value >= 90001) & (value <= 90500) )
+	 else if ( (value >= 90001) & (value <= 90500) )
        {  overmin = ((779)); 
        premium = (overmin);
     }
@@ -858,7 +957,7 @@ if( !validateNumeric(value))
        {  overmin = ((841)); 
        premium = (overmin);
     }
-  else if ( (value >= 99501) & (value <= 100000) )
+	else if ( (value >= 99501) & (value <= 100000) )
        {  overmin = ((843)); 
        premium = (overmin);
     }
@@ -911,45 +1010,227 @@ if( !validateNumeric(value))
       s1 = s1+"00";
       
 {
-  
-  }
-  
+	
+	}
+	
 }
     return s1
 }
-      </SCRIPT>
- <FORM name="rateform">
-              <table class="calc">
-              <TR> 
-                <TD colspan="4"><div align="right"><b><font size=4 face="Verdana" color="#7f7b63"> 
-                    Enter Policy Amount</font></b></div>
-                    </TD>
-                <TD><INPUT name=insurance size="35" style="background-color: #FFFFFF; border: 1px inset #C0C0C0; font-size:11px">
-                </TD>
-                </TR>
-              <tr> 
-                <TD colspan="4"><div align="right">Do 
-                    not enter any currency symbols or commas<br></div>
-                    </TD
-              </tr>
-              <tr> 
-                <TD colspan="4"><font color="#006600" size="2" face="Verdana"> 
-                  <div align="right"><INPUT onclick=calculateRate(); type=button value="Calculate Basic Premium:" name=calculate_rate style="border:1px solid #7f7b63; font-family: Arial; font-size: 8pt; font-weight:bold"></font></div><br /><br /></TD>
-              </tr>
-              <tr> 
-                <TD><b><font size=4 face="Verdana" color="#7f7b63"><div align="center">Basic 
-                    Premium</font></b></div></TD>
-                    </tr>
-                    <tr>
-                <TD><div align="right"><INPUT size=35 value=0 name=Loan_Policy style="border: 1px inset #C0C0C0; font-size:11px"></div>
-                </TD>
-              </tr>
-              <tr>
-                <TD><i><div align="center">Rate calculations are base on information 
-                    obtained from the Texas Department of Insurance.<br>
-                    These rates are effective as of February 1, 2007 and are subject 
-                    to change each year.</i></div></TD>
-              </tr>
-            </table></FORM>
+      </script>
+  <tr> 
+    <td> <form name="rateform" method="post" action="">
+        <b><font size=2 face="Verdana" color="#7f7b63"> </font></b> 
+        <table width="100%" cellspacing="0" cellpadding="3">
+          <tr> 
+            <td colspan="3"><div align="right"><b><font size=4 face="Verdana" color="#7f7b63"> 
+                Enter New Loan Amount</font></b></div></td>
+            <td width="37%"><INPUT name=insurance size="20" style="background-color: #FFFFFF; border: 1px inset #C0C0C0; font-size:11px"></td>
+
+          </tr>
+          <tr valign="top"> 
+            <td colspan="4"><div align="center"><font size=3 face="Verdana">Do 
+                not enter any currency symbols or commas</FONT></div></td>
+          </tr>
+          <tr> 
+            <td colspan="4"><div align="center"> 
+                <INPUT onclick=calculateRate(); type=button value="Calculate Basic Premium:" name=calculate_rate style="border:1px solid #7f7b63; font-family: Arial; font-size: 11pt; font-weight:bold">
+              </div></td>
+          </tr>
+          <tr> 
+            <td colspan="3"><div align="right"><b><font size=3 face="Verdana" color="#7f7b63">Basic 
+                Premium</font></b></div></td>
+
+            <td><INPUT size=20 value=0 name=Loan_Policy style="border: 1px inset #C0C0C0; font-size:11px"></td>
+          </tr>
+          <tr> 
+            <td colspan="4"><div align="center"><i><font size="3">Rate calculations 
+                are base on information obtained from<br /> the Texas Department of 
+                Insurance.<br>
+                These rates are effective as of February 1, 2007 and are subject 
+                to change each year.</font></i> </div></td>
+          </tr>
+          <tr> 
+            <td colspan="3">&nbsp;</td>
+
+            <td>&nbsp;</td>
+          </tr>
+          <tr> 
+            <td colspan="3"><b><font size=3 face="Verdana" color="#7f7b63">Endorsements</font></b></td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr> 
+            <td colspan="3"><font color="#000000" size="3" face="Verdana, Arial, Helvetica, sans-serif">T-19 
+              <br>
+              </font></td>
+
+            <td><input size=20 value=0 name=T19 style="border: 1px inset #c0c0c0; font-size:11px"></td>
+          </tr>
+          <tr> 
+            <td colspan="3"><font color="#000000" size="3" face="Verdana, Arial, Helvetica, sans-serif">Standard 
+              Endorsements</font></td>
+            <td><input size=20 value=$50.00 name=se style="border: 1px inset #c0c0c0; font-size:11px"></td>
+          </tr>
+          <tr> 
+            <td width="33%"><font color="#000000" size="3" face="Verdana, Arial, Helvetica, sans-serif">Homeowners 
+              Association </font></td>
+            <td width="6%"><input type="checkbox" name="checkbox" id="checkbox" value="checkbox" onclick=calculateRate();></td>
+
+            <td width="24%"><font size="3" face="Verdana, Arial, Helvetica, sans-serif">$25</font></td>
+            <td><input size=20 value=0 name=hoa style="border: 1px inset #c0c0c0; font-size:11px"></td>
+          </tr>
+          <tr> 
+            <td><font color="#000000" size="3" face="Verdana, Arial, Helvetica, sans-serif">Adjustable 
+              Rate </font></td>
+            <td><input type="checkbox" name="checkbox2"  id="checkbox2" value="checkbox" onclick=calculateRate();></td>
+            <td><font size="3" face="Verdana, Arial, Helvetica, sans-serif">$20</font></td>
+            <td><input size=20 value=0 name=ar style="border: 1px inset #c0c0c0; font-size:11px"></td>
+
+          </tr>
+          <tr> 
+            <td><font color="#000000" size="3" face="Verdana, Arial, Helvetica, sans-serif">Balloon 
+              Mortgage</font></td>
+            <td><input type="checkbox" name="checkbox3" id="checkbox3" value="checkbox" onclick=calculateRate();></td>
+            <td><font size="3" face="Verdana, Arial, Helvetica, sans-serif">$25</font></td>
+            <td><input size=20 value=0 name=bm style="border: 1px inset #c0c0c0; font-size:11px"></td>
+          </tr>
+          <tr> 
+            <td><font color="#000000" size="3" face="Verdana, Arial, Helvetica, sans-serif">Home 
+              Equity</font></td>
+
+            <td><input type="checkbox" name="checkbox4" id="checkbox4" value="checkbox" onclick=calculateRate();></td>
+            <td><font size="3" face="Verdana, Arial, Helvetica, sans-serif">25% 
+              of Basic</font></td>
+            <td><input size=20 value=0 name=he style="border: 1px inset #c0c0c0; font-size:11px"></td>
+          </tr>
+          <tr> 
+            <td colspan="3"><div align="right"><font color="#000000" size="3" face="Verdana, Arial, Helvetica, sans-serif"><strong>Total 
+                Premium </strong></font></div></td>
+            <td><input size=20 value=0 name=prem style="border: 1px inset #c0c0c0; font-size:11px"></td>
+          </tr>
+
+          <tr> 
+            <td colspan="3">&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr bgcolor="#cac39c"> 
+            <td colspan="4"><div align="center"><font color="#FFFFFF" size="3" face="Verdana, Arial, Helvetica, sans-serif"><strong>Calculate 
+                New Premium</strong></font></div></td>
+          </tr>
+          <tr> 
+            <td colspan="3"><div align="right"><b><font size=3 face="Verdana" color="#7f7b63"> 
+                Enter Payoff Amount</font></b></div></td>
+
+            <td><INPUT name=insurance2 size="20" style="background-color: #FFFFFF; border: 1px inset #C0C0C0; font-size:11px"></td>
+          </tr>
+          <tr valign="top"> 
+            <td colspan="4"><div align="center"><font size=2 face="Verdana">Do 
+                not enter any currency symbols or commas</FONT></div></td>
+          </tr>
+          <tr> 
+            <td colspan="4"><div align="center"> 
+                <INPUT onclick=calculateRate(); type=button value="Calculate Basic Premium:" name=calculate_rate style="border:1px solid #7f7b63; font-family: Arial; font-size: 11pt; font-weight:bold">
+              </div></td>
+          </tr>
+
+          <tr> 
+            <td colspan="3"><div align="right"><b><font size=3 face="Verdana" color="#7f7b63">Basic 
+                Premium</font></b></div></td>
+            <td><INPUT size=20 value=0 name=Loan_Policy2 style="border: 1px inset #C0C0C0; font-size:11px"></td>
+          </tr>
+          <tr> 
+            <td colspan="4"><div align="center"><i><font size="2">Rate calculations 
+                are base on information obtained from the Texas Department of 
+                Insurance.<br>
+                These rates are effective as of February 1, 2007 and are subject 
+                to change each year.</font></i> </div></td>
+          </tr>
+
+          <tr> 
+            <td colspan="3">&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr> 
+            <td colspan="3"><b><font size=3 face="Verdana" color="#7f7b63">Renewal 
+              &amp; Extension Credits R-8</font></b></td>
+            <td>&nbsp;</td>
+          </tr>
+
+          <tr> 
+            <td colspan="3"><b><font size=3 face="Verdana" color="#7f7b63">Up 
+              to 2 years - 40% R-8 (a)</font></b></td>
+            <td><input size=20 value=0 name=a style="border: 1px inset #c0c0c0; font-size:11px"></td>
+          </tr>
+          <tr> 
+            <td colspan="3"><b><font size=3 face="Verdana" color="#7f7b63">2-3 
+              years - 35% R-8 (b)</font></b></td>
+            <td><input size=20 value=0 name=b style="border: 1px inset #c0c0c0; font-size:11px"></td>
+          </tr>
+          <tr> 
+            <td colspan="3"><b><font size=3 face="Verdana" color="#7f7b63">3-4 
+              years - 30% R-8 (c)</font></b></td>
+
+            <td><input size=20 value=0 name=c style="border: 1px inset #c0c0c0; font-size:11px"></td>
+          </tr>
+          <tr> 
+            <td colspan="3"><b><font size=3 face="Verdana" color="#7f7b63">4-5 
+              years - 25% R-8 (d)</font></b></td>
+            <td><input size=20 value=0 name=d style="border: 1px inset #c0c0c0; font-size:11px"></td>
+          </tr>
+          <tr> 
+            <td colspan="3"><b><font size=3 face="Verdana" color="#7f7b63">5-6 
+              years - 20% R-8 (e)</font></b></td>
+            <td><input size=20 value=0 name=e style="border: 1px inset #c0c0c0; font-size:11px"></td>
+
+          </tr>
+          <tr> 
+            <td colspan="3"><b><font size=3 face="Verdana" color="#7f7b63">6-7 
+              years - 15% R-8 (f) </font></b></td>
+            <td><input size=20 value=0 name=f style="border: 1px inset #c0c0c0; font-size:11px"></td>
+          </tr>
+          <tr> 
+            <td colspan="3">&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+
+          <tr> 
+            <td colspan="3"><font size="3" face="Verdana, Arial, Helvetica, sans-serif">Date 
+              old loan was established to determine R-8 credit </font><br></td>
+            <td><input size=20 value="" name=olddate style="border: 1px inset #c0c0c0; font-size:11px"> 
+              <font size="2" face="Verdana, Arial, Helvetica, sans-serif">(xx/xx/xxxx) 
+              </font></td>
+          </tr>
+          <tr> 
+            <td colspan="3"> <div align="right"><font color="#7f7b63" size="3" face="Verdana, Arial, Helvetica, sans-serif"><strong>Credit 
+                </strong></font><br>
+              </div></td>
+
+            <td><input size=20 value=0 name=credit style="border: 1px inset #c0c0c0; font-size:11px"></td>
+          </tr>
+          <tr> 
+            <td colspan="3"><div align="right"> 
+                <INPUT onclick=calculateRate(); type=button value="Calculate Basic Premium:" name=calculate_rate2 style="border:1px solid #7f7b63; font-family: Arial; font-size: 11pt; font-weight:bold">
+              </div></td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr> 
+            <td colspan="3"> <div align="right"><font color="#FF0000" size="4" face="Verdana, Arial, Helvetica, sans-serif"><strong>Total 
+                Refinanced Premium </strong></font><br>
+
+              </div></td>
+            <td><input size=20 value=0 name=revised style="border: 1px inset #c0c0c0; font-size:11px"></td>
+          </tr>
+          <tr> 
+            <td colspan="4"><div align="center"><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif">*** 
+                This calculator is intended as an estimate only. Final figures 
+                are subject to change.</font></div></td>
+          </tr>
+          <tr> 
+            <td colspan="3">&nbsp;</td>
+            <td>&nbsp;</td>
+
+          </tr>
+        </table>
+      </form></td></tr></table>
+
 </body>
 </html>
