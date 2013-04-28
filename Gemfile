@@ -62,3 +62,5 @@ gem 'refinerycms-i18n', '~> 2.0.0'
 gem 'bourbon'
 
 gem 'newrelic_rpm'
+
+gem 'rack-mini-profiler'

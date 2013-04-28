@@ -1,23 +1,23 @@
 .custom {
-	height:32px;
-	border:1px solid #292929;
-	font-family:Arial, Helvetica, sans-serif;
+	/*height:32px;*/
+	/*border:1px solid #292929;*/
+	/*font-family:Arial, Helvetica, sans-serif;*/
 	
-	background-color:#4b4b4b;
+/*	background-color:#4b4b4b;
 	background-image:-webkit-linear-gradient(top, #555, #404040);
 	background-image:-moz-linear-gradient(top, #555, #404040);
 	background-image:-o-linear-gradient(top, #555, #404040);
 	background-image:-ms-linear-gradient(top, #555, #404040);
 	background-image:linear-gradient(top, #555, #404040);
-	
-	-webkit-border-radius:3px;
+*/	
+/*	-webkit-border-radius:3px;
 	-moz-border-radius:3px;
 	border-radius:3px;
 
 	-webkit-box-shadow:inset 0 1px #787878, inset 0 -1px #292929, 0 1px 3px #ddd;
 	-moz-box-shadow:inset 0 1px #787878, inset 0 -1px #292929, 0 1px 3px #ddd;
 	box-shadow:inset 0 1px #787878, inset 0 -1px #292929, 0 1px 3px #ddd;
-}
+*/}
 
 .custom a {text-decoration:none;}
 
@@ -30,12 +30,12 @@
 	padding:8px 12px 8px;
 }
 .custom > li:hover > a {
-	background-color:#666;
+	/*background-color:#666;*/
 	
-	-webkit-box-shadow:inset 0 3px #575757, inset 1px 0 #787878;
+/*	-webkit-box-shadow:inset 0 3px #575757, inset 1px 0 #787878;
 	-moz-box-shadow:inset 0 3px #575757, inset 1px 0 #787878;
 	box-shadow:inset 0 3px #575757, inset 1px 0 #787878;
-	
+*/	
 	border-left:none;
 	padding-left:13px;
 }
@@ -139,33 +139,38 @@
 /* sub menu ------------------------------ */
 
 .custom ul {
-	background-color:#666;
-	border:1px solid #2c2c2c;
+	/*background-color:#666;*/
+	/*background-color:#CEDCC6;*/
+	background-color:#DDE6D7;
+	/*border:1px solid #2c2c2c;*/
 	border-top:none;
 	left:-1px;
-	-webkit-box-shadow:0 2px #ddd, inset 1px 0 #787878;
-	-moz-box-shadow:0 2px #ddd, inset 1px 0 #787878;
-	box-shadow:0 2px #ddd, inset 1px 0 #787878;
+	/*-webkit-box-shadow:0 2px #ddd, inset 1px 0 #787878;*/
+	/*-moz-box-shadow:0 2px #ddd, inset 1px 0 #787878;*/
+	/*box-shadow:0 2px #ddd, inset 1px 0 #787878;*/
 }
 .custom > li.floatr > ul {right:-1px;left:auto;}
 .custom > li.floatr > ul ul {left:-127px;}
 .custom ul a {
-	color:#fff;
+	/*color:#fff;*/
+	/*background-color:#CEDCC6;*/
+	background-color:#DDE6D7;
 	font-weight:bold;
 	font-size:12px;
 	line-height:18px;
 	padding:5px 10px;
-	border-top:1px solid #4c4c4c;
-	-webkit-box-shadow:inset 0 1px #787878;
-	-moz-box-shadow:inset 0 1px #787878;
-	box-shadow:inset 0 1px #787878;
+	/*border-top:1px solid #4c4c4c;*/
+	/*-webkit-box-shadow:inset 0 1px #787878;*/
+	/*-moz-box-shadow:inset 0 1px #787878;*/
+	/*box-shadow:inset 0 1px #787878;*/
 	text-shadow:0 -1px #0f0f0f;
 }
 .custom ul a:hover {
-	background-color:#606060;
-	-webkit-box-shadow:inset 1px 1px #787878;
-	-moz-box-shadow:inset 1px 1px #787878;
-	box-shadow:inset 1px 1px #787878;
+	/*background-color:#606060;*/
+	color:#333;
+	/*-webkit-box-shadow:inset 1px 1px #787878;*/
+	/*-moz-box-shadow:inset 1px 1px #787878;*/
+	/*box-shadow:inset 1px 1px #787878;*/
 }
 .custom ul ul li:first-child a {border-top-color:#2c2c2c;}
 

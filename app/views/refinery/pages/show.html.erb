@@ -1,7 +1,191 @@
-<div id="sidemenu">
-    <%= render '/refinery/side_menu' %>
-</div>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 
-<div id="refineryPageRender">
-    <%= render '/refinery/content_page' %>
+    <!-- BC_OBNW -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Employment Law Specialists | Springhouse Solicitors</title>
+<link href="/stylesheets/ModuleStyleSheets.css" type="text/css" rel="StyleSheet" />
+<script type="text/javascript">var jslang='EN';</script>
+<link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/main.css" />
+<script type="text/javascript" src="/js/jquery-1.4.1.min.js"></script>
+<!-- <script type="text/javascript" src="/js/jquery.colorbox-min.js"></script> -->
+<script type="text/javascript" src="/js/jquery.cycle.js"></script>
+<script type="text/javascript" src="/js/cufon/cufon-yui.js"></script>
+<script type="text/javascript" src="/js/cufon/font.ubuntu.js"></script>
+<script type="text/javascript" src="/js/cufon/cufon.config.js"></script>
+
+<link rel="shortcut icon" href="fav.ico" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js" type="text/javascript"></script>
+<script src="http://tab-slide-out.googlecode.com/files/jquery.tabSlideOut.v1.3.js"></script>
+
+<meta name="language" content="en" />
+<meta name="robots" content="index, follow" />
+<meta content="ic_Dyw3PX4JLp-hFZqVYn4FM-bBFeJmWZiP1xZeDQu0" name="google-site-verification" />
+<meta content="Employment Solicitors serving Chichester, Winchester, Portsmouth and Southampton. Springhouse Solicitors take a fresh approach to employment law. Call us to discuss how we can help you." name="Description" />
+</head>
+<body class="home">
+
+    
+        <div id="body_outer_wrapper">
+        <div class="outer-wrapper">
+        <div class="inner-wrapper">
+        <div id="bar">
+
+
+<!-- <div id="mainnav"><ul><li  ><a href="http://www.springhouselaw.com/">Home</a></li><li  ><a href="/we-are-different">We Are Different</a></li><li  ><a href="/our-expertise">Our Expertise</a></li><li  ><a href="/who-we-are">Who We Are</a></li><li  ><a href="/our-clients">Our Clients</a></li><li id="contact" class="menu-item"><a href="/contact-us">Contact Us</a></li></ul></div> -->
+
+<%= render(:partial => "/refinery/menu", :locals => {
+             :dom_id => 'menu',
+             :css => 'menu'
+           }) %>
+
 </div>
+<div id="header"> <a href="/_blog/Employment_Law_blog" class="blog"><span>The Blog</span></a>
+<div class="left trans"><%= image_tag("holland-logo-white.png", :height => '100', :width => '550', :style => "opacity:0.5; filter:alpha(opacity=50);") %></div>
+<div class="right">
+<p> Phone: 940 312 7345<br />
+Fax: 940 312 7346<br />
+<a href="mailto:info@hollandlawandtitle.com" onclick="_gaq.push(['_trackEvent', 'Enquiry', 'Email', 'Header']);">info@hollandlawandtitle.com</a></p>
+</div>
+</div>
+        
+
+        <div id="main">
+
+<!-- This is the actual content of the page.. -->
+
+<%= render_content_page(@page, {
+      :hide_sections => local_assigns[:hide_sections],
+      :can_use_fallback => !local_assigns[:show_empty_sections] && !local_assigns[:remove_automatic_sections]
+    }) %>
+    
+        <div class="container bottom-margin">
+        <div class="col c65">
+        <h2> Our sole focus is&nbsp;<strong>title law</strong> and we provide...</h2>
+        <p> <span style="display: none;" _fck_bookmark="1">&nbsp;</span><span style="display: none;" _fck_bookmark="1">&nbsp;</span></p>
+        <p class="large">&nbsp; </p>
+        <div class="col c20"> <img src="/images/home-leaf.jpg" alt="Clarity - Straight talking clear legal advice." />
+        <h3> Clarity</h3>
+        <p> Straight talking solicitors, easy-to-understand explanations and clear advice. We'll tell you what you can do and what you shouldn't.<br />
+        <a href="/we-are-different">Learn More</a></p>
+        </div>
+        <div class="col c20"> <img src="/images/home-sun.jpg" alt="Friendly, down-to-earth experts in all aspects of employment law" />
+        <h3> Knowledge</h3>
+        <p> Friendly, down-to-earth and dynamic, our liberating approach and employment law expertise are what make us stand out from the crowd.&nbsp;<br />
+        <a href="/we-are-different">Learn More</a></p>
+        </div>
+        <div class="col c20 last"> <img src="/images/home-bean.jpg" alt="Value for money fair pricing - no hidden costs or overcharging." />
+        <h3> Value for money</h3>
+        <p> No hidden costs or overcharging. As we're independent, we have lower overheads and can offer a service that is exceptional value for money.<br />
+        <a href="/we-are-different">Learn More</a></p>
+        </div>
+        </div>
+        <div class="col c35 last">
+        <div class="green">
+        <h2>Our Expertise</h2>
+        <p class="large">Contact our friendly team for assistance with:</p>
+        <ul class="sub-nav">
+            <li class="first  "><a class="business-sales-purchases  " href="/business-sales-purchases">Business Sales &amp; Purchases</a></li>
+            <li class=" "><a class="compromise-agreements  " href="/compromise-agreements">Compromise Agreements</a></li>
+            <li class=" "><a class="contracts-policies-and-benefits  " href="/contracts-policies-and-benefits">Contracts, Policies and Benefits</a></li>
+            <li class=" "><a class="equal-rights  " href="/equal-rights">Equal Rights &amp; Discrimination</a></li>
+            <li class=" "><a class="hr-support  " href="/hr-support">HR Support</a></li>
+            <li class=" "><a class="immigration  " href="/immigration">Immigration</a></li>
+            <li class=" "><a class="issues-with-staff  " href="/issues-with-staff">Issues with Staff</a></li>
+            <li class=" "><a class="legal-disputes  " href="/legal-disputes">Legal Disputes</a></li>
+            <li class=" "><a class="mediation  " href="/mediation">Mediation</a></li>
+            <li class=" "><a class="redundancies-and-restructures  " href="/redundancies-and-restructures">Redundancies and Restructures</a></li>
+            <li class=" "><a class="unfair-dismissal  " href="/unfair-dismissal">Unfair Dismissal</a></li>
+            <li class="last  "><a class="are-you-an-employee  " href="/are-you-an-employee">Are you an Employee?</a></li>
+        </ul>
+        </div>
+        </div>
+        <div class="hr-v">
+        <hr />
+        </div>
+        </div>
+        </div>
+    
+
+
+        </div>
+        </div>
+        </div>
+        <div class="outer-wrapper footer">
+        <div class="inner-wrapper footer">
+        <style>
+    .foot-copy { float:left;
+    width:620px;
+    }
+    #foot-copy-1 {
+    width:620px;
+    float:left;
+    }
+</style>
+<div id="footer">
+<div class="container">
+<div class="foot-copy">
+<div class="col c33">
+<h2>Chichester</h2>
+<p>Unit F, Hills Barns<br />
+Appledram Lane<br />
+Chichester<br />
+West Sussex, PO20 7EG<br />
+Tel: 01243 531 587</p>
+<h2>Employment Law Services</h2>
+<p>We provide employment law services <br />
+throughout Hampshire and West Sussex.</p>
+</div>
+<div class="col c33">
+<h2>Winchester</h2>
+<p>Basepoint Business Centre<br />
+1 Winnall Valley Road<br />
+Winchester<br />
+Hampshire, SO23 0LD<br />
+Tel: 01962 388 780</p>
+<h2>Email:<a href="mailto:enquiries@springhouselaw.com" style="font-size: 18px;" onclick="_gaq.push(['_trackEvent', 'Enquiry', 'Email', 'Footer']);">enquiries@springhouselaw.com</a></h2>
+</div>
+<div id="foot-copy-1">
+<p>&copy; Springhouse Solicitors Ltd. All Rights Reserved.<br />
+<small>Springhouse is a registered trade mark of Springhouse Solicitors Ltd, registration number 2574797.<br />
+Authorised and regulated by the Solicitors Regulation Authority under practice number 536056.<br />
+Registered in England &amp; Wales under company registration number 7188880. </small></p>
+<ul class="footer-nav">
+    <li class="first  "><a href="/privacy-policy" class="privacy-policy  ">Privacy Policy</a> </li>
+    <li class=" "><a href="/terms-of-use" class="terms-of-use  ">Terms of Use</a> </li>
+    <li class="last  "><a href="/site-map" class="site-map  ">Site Map</a> </li>
+</ul>
+</div>
+</div>
+<div class="col c33 last">
+<p class="shallow"><a href="http://www.corp-intl.com" class="blank"><img alt="corporate-intl" src="/images/corporate-intl.gif" /></a> <img alt="" src="/images/in-support-of-war-child-red.jpg" style="border: 0px none;" /> </p>
+<h2>Newsletter Signup</h2>
+<script type="text/javascript">
+function clearText(thefield){
+if (thefield.defaultValue==thefield.value)
+thefield.value = ""
+} 
+</script>
+
+
+
+</div>
+</div>
+<div class="container">
+<div class="col c70">
+</div>
+<div class="col c30 last">&nbsp; </div>
+</div>
+</div>
+        </div>
+        </div>
+        <script type="text/javascript"> Cufon.now(); </script>
+        </div>
+    
+
+
+</body>
+</html>

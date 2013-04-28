@@ -30,52 +30,38 @@ $container-border-width: 1px;
 
 
 
-body, #page_container {
-    min-height: 800px;
-    width: 1024px;
-}
+// body, #page_container {
+//     min-height: 800px;
+//     width: 1024px;
+// }
 
-body {
-    right: 50%;
-    position: absolute;
-}
+// body {
+//     right: 50%;
+//     position: absolute;
+// }
 
-#page_container {
-    left: 48%;
-    position: relative;
-    background: $container-color;
-    border-left: $container-border-width solid $dark;
-    border-right: $container-border-width solid $dark;
-    padding: 0px;
-}
+// #page_container {
+//     left: 48%;
+//     position: relative;
+// //    background: $container-color;
+// //    border-left: $container-border-width solid $dark;
+// //    border-right: $container-border-width solid $dark;
+//     padding: 0px;
+// }
 
 
-body {
-  font-family: $georgia;
-  font-size: 16px;
-  margin: 0;
-  background-image: url(/assets/parchment.png);
-}
+// body {
+//   font-family: $georgia;
+//   font-size: 16px;
+//   margin: 0;
+// //  background-image: url(/assets/parchment.png);
+// }
 
 body div footer {
   height:32px;
-  border:1px solid #292929;
+  // border:1px solid #292929;
   font-family:Arial, Helvetica, sans-serif;
   
-  background-color:#4b4b4b;
-  background-image:-webkit-linear-gradient(top, #555, #404040);
-  background-image:-moz-linear-gradient(top, #555, #404040);
-  background-image:-o-linear-gradient(top, #555, #404040);
-  background-image:-ms-linear-gradient(top, #555, #404040);
-  background-image:linear-gradient(top, #555, #404040);
-  
-  -webkit-border-radius:3px;
-  -moz-border-radius:3px;
-  border-radius:3px;
-
-  -webkit-box-shadow:inset 0 1px #787878, inset 0 -1px #292929, 0 1px 3px #ddd;
-  -moz-box-shadow:inset 0 1px #787878, inset 0 -1px #292929, 0 1px 3px #ddd;
-  box-shadow:inset 0 1px #787878, inset 0 -1px #292929, 0 1px 3px #ddd;
 }
 
 body div footer p {
@@ -92,7 +78,7 @@ h1, h2, h3 {
 
 #page {
   clear: both;
-  margin: 12px;
+  margin: 0px;
   text-align: justify;
 }
 
@@ -105,8 +91,8 @@ h1, h2, h3 {
   font-size: 32px;
   height: 120px;
   // background-image: url(/assets/header.png);
-  background-image: url(/assets/blueheader.jpg);
-  background-repeat: no-repeat;
+  // background-image: url(/assets/blueheader.jpg);
+  // background-repeat: no-repeat;
   // background-position: right;
   background-size: 1024px 160px;
 }
