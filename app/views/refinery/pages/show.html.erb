@@ -55,13 +55,14 @@ Fax: 940 312 7346<br />
 
         <div id="main">
 
-<!-- This is the actual content of the page.. -->
+            <!-- This is the actual content of the page.. -->
+        <div id="railscontent">
+            <%= render_content_page(@page, {
+                  :hide_sections => local_assigns[:hide_sections],
+                  :can_use_fallback => !local_assigns[:show_empty_sections] && !local_assigns[:remove_automatic_sections]
+                }) %>
 
-<%= render_content_page(@page, {
-      :hide_sections => local_assigns[:hide_sections],
-      :can_use_fallback => !local_assigns[:show_empty_sections] && !local_assigns[:remove_automatic_sections]
-    }) %>
-    
+        </div>
         <div class="container bottom-margin">
         <div class="col c65">
         <h2> Our sole focus is&nbsp;<strong>title law</strong> and we provide...</h2>
