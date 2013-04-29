@@ -16,6 +16,7 @@ end
 
 group :production do
   gem 'pg'
+  gem 'net-scp', '1.0.4'
   gem 'fog'
 end
 
