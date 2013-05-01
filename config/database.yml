@@ -30,4 +30,4 @@ production:
   database: holland_law_production
   pool: 5
   username: root
-  password: wdpvoifwmcue
+  password: holland
