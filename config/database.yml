@@ -27,7 +27,8 @@ production:
 production:
   adapter: postgresql
   encoding: unicode
-  database: holland_law_production
+  database: holland
   pool: 5
-  username: root
-  password: holland
+  host: 198.211.102.208
+  username: hollanddb
+  password: lawtitle
