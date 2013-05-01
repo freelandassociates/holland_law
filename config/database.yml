@@ -29,5 +29,5 @@ production:
   encoding: unicode
   database: holland_law_production
   pool: 5
-  username: holland
-  password: lawandtitle
+  username: root
+  password: wdpvoifwmcue
