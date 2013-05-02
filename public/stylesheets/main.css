@@ -8,7 +8,8 @@ body {
 }
 body.home {
 	/*background:#639046 url(/images/home-bg.jpg) top center no-repeat;*/
-	background:#639046 url(/images/nice-tree.jpeg) top center no-repeat;
+	/*background:#639046 url(/images/nice-tree.jpeg) top center no-repeat;*/
+	background:#8DC420 url(/images/hummingbird.jpg) top center no-repeat;
 	/*background-size: contain;*/
 	background-size: 1280px 800px;
 }
@@ -279,7 +280,7 @@ span.highlight {
 	color:#efffa7;
 }
 .bottom-margin {
-	margin-bottom:29px;
+	margin-bottom:20px;
 }
 .small-bottom-margin {
 	margin-bottom:15px;
@@ -527,7 +528,8 @@ table .width25 {
 	overflow:visible;
 }
 .inner-wrapper {
-	width:940px;
+	/*width:940px;*/
+	width:1140px;
 	margin:0 auto;
 	overflow:visible;
 }
@@ -725,6 +727,14 @@ table .width25 {
 #header a.blog span {
 	display:none;
 }
+
+.cms-content {
+	width: 850px;
+	float: left;
+	/*border: 1px solid black;*/
+	padding-left: 15px;
+}
+
 .system-message, .system-error-message {
 	background-color: transparent;
 	border: 0px;

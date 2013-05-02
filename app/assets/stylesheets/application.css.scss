@@ -118,12 +118,20 @@ h1, h2, h3 {
   float: left;
 }
 
+#accordion {
+  width: 270px;
+  opacity: 0.8;
+  float: left;
+}
+  
 #accordion h3 {
-  font-size: 12px;
+  font-size: 14px;
+
+  color: #5A770E;
 }
 
 #accordion .ui-accordion-content {
-  height: 250px;
+  height: 240px;
   padding: 0px;
 }
 

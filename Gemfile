@@ -7,7 +7,8 @@ gem 'rails', '3.2.3'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 group :development, :test do
-  gem 'sqlite3'
+  # gem 'sqlite3'
+  gem 'pg'
 	
 	gem 'better_errors'
 	gem 'binding_of_caller'
@@ -64,4 +65,4 @@ gem 'bourbon'
 
 gem 'newrelic_rpm'
 
-gem 'rack-mini-profiler'
+# gem 'rack-mini-profiler'
