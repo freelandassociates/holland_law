@@ -40,12 +40,11 @@
 <%= render(:partial => "/refinery/menu", :locals => {
              :dom_id => 'menu',
              :css => 'menu'
-           }) %>
+           }) %> 
 
 </div>
 <div id="header"> <a href="/_blog/Employment_Law_blog" class="blog"><span>The Blog</span></a>
-<div class="left trans"><%= image_tag("holland-logo-white.png", :height => '100', :width => '550', :style => "opacity:0.5; filter:alpha(opacity=50);") %></div>
-<div class="right">
+<div class="left trans"><%= image_tag("holland-logo-white.png", :height => '100', :width => '550', :style => "opacity:0.5; filter:alpha(opacity=50);") %></div><div class="right">
 <p> Phone: 940 312 7345<br />
 Fax: 940 312 7346<br />
 <a href="mailto:info@hollandlawandtitle.com" onclick="_gaq.push(['_trackEvent', 'Enquiry', 'Email', 'Header']);">info@hollandlawandtitle.com</a></p>
@@ -54,16 +53,52 @@ Fax: 940 312 7346<br />
         
 
         <div id="main">
-
-            <!-- This is the actual content of the page.. -->
-        <div id="railscontent">
-            <%= render_content_page(@page, {
-                  :hide_sections => local_assigns[:hide_sections],
-                  :can_use_fallback => !local_assigns[:show_empty_sections] && !local_assigns[:remove_automatic_sections]
-                }) %>
-
+        <h1 class="large">Holland Law and Title</h1>
+        <div class="hr thin bottom-margin">
+        <hr />
         </div>
-        <div class="container bottom-margin">
+        
+        <%= render "/refinery/side_menu" %>
+        
+        <div class="cms-content">
+            <div id="railscontent">
+                <%= render_content_page(@page, {
+                      :hide_sections => local_assigns[:hide_sections],
+                      :can_use_fallback => !local_assigns[:show_empty_sections] && !local_assigns[:remove_automatic_sections]
+                    }) %>
+
+            </div>
+    </div>
+            
+<!--         <div class="container bottom-margin">
+        <div class="col c25">
+        <h3> We are different</h3>
+        <p> Modern and innovative, Holland Law and Title breaks the mould. We are down to earth, competitively priced, and have deep specialist knowledge.&nbsp;<br />
+        <a href="/we-are-different">Learn More</a></p>
+        </div>
+        <div class="col c25 right last">
+        <h3> Our expertise</h3>
+        <p> Specialists in our field, your title matters will be expertly handled. We'll give you practical guidance in plain English.<br />
+        <a href="/our-expertise">Learn More</a></p>
+        </div>
+        </div> -->
+<!--         <div class="container bottom-margin">
+        <div class="col c25">
+        <h3> Who we are</h3>
+        <p> Holland Law and Title is an independent firm of highly qualified professionals. We're friendly, flexible and always on hand to help.<br />
+        <a href="/who-we-are">Learn More</a></p>
+        </div>
+        <div class="col c25 right last">
+        <h3> Our clients</h3>
+        <p> Don't just take our word for it. We empower our clients, so they can get on with running their businesses. Here's what some have said about us.<br />
+        <a href="/our-clients">Learn More</a></p>
+        </div>
+        </div> -->
+        </div>
+        <div class="hr-v">
+        <hr />
+        </div>
+<!--         <div class="container bottom-margin">
         <div class="col c65">
         <h2> Our sole focus is&nbsp;<strong>title law</strong> and we provide...</h2>
         <p> <span style="display: none;" _fck_bookmark="1">&nbsp;</span><span style="display: none;" _fck_bookmark="1">&nbsp;</span></p>
@@ -107,7 +142,7 @@ Fax: 940 312 7346<br />
         <div class="hr-v">
         <hr />
         </div>
-        </div>
+        </div> -->
         </div>
     
 
@@ -130,40 +165,15 @@ Fax: 940 312 7346<br />
 <div class="container">
 <div class="foot-copy">
 <div class="col c33">
-<h2>Chichester</h2>
-<p>Unit F, Hills Barns<br />
-Appledram Lane<br />
-Chichester<br />
-West Sussex, PO20 7EG<br />
-Tel: 01243 531 587</p>
-<h2>Employment Law Services</h2>
-<p>We provide employment law services <br />
-throughout Hampshire and West Sussex.</p>
+<h2>Office Address</h2>
+<p>Holland Law and Title </br>
+    4251 Fm 2181 Ste 200<br/>
+Corinth,</br>
+TX 76210-4220<br />
+
 </div>
-<div class="col c33">
-<h2>Winchester</h2>
-<p>Basepoint Business Centre<br />
-1 Winnall Valley Road<br />
-Winchester<br />
-Hampshire, SO23 0LD<br />
-Tel: 01962 388 780</p>
-<h2>Email:<a href="mailto:enquiries@springhouselaw.com" style="font-size: 18px;" onclick="_gaq.push(['_trackEvent', 'Enquiry', 'Email', 'Footer']);">enquiries@springhouselaw.com</a></h2>
-</div>
-<div id="foot-copy-1">
-<p>&copy; Springhouse Solicitors Ltd. All Rights Reserved.<br />
-<small>Springhouse is a registered trade mark of Springhouse Solicitors Ltd, registration number 2574797.<br />
-Authorised and regulated by the Solicitors Regulation Authority under practice number 536056.<br />
-Registered in England &amp; Wales under company registration number 7188880. </small></p>
-<ul class="footer-nav">
-    <li class="first  "><a href="/privacy-policy" class="privacy-policy  ">Privacy Policy</a> </li>
-    <li class=" "><a href="/terms-of-use" class="terms-of-use  ">Terms of Use</a> </li>
-    <li class="last  "><a href="/site-map" class="site-map  ">Site Map</a> </li>
-</ul>
-</div>
-</div>
+
 <div class="col c33 last">
-<p class="shallow"><a href="http://www.corp-intl.com" class="blank"><img alt="corporate-intl" src="/images/corporate-intl.gif" /></a> <img alt="" src="/images/in-support-of-war-child-red.jpg" style="border: 0px none;" /> </p>
-<h2>Newsletter Signup</h2>
 <script type="text/javascript">
 function clearText(thefield){
 if (thefield.defaultValue==thefield.value)

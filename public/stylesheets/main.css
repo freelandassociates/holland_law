@@ -9,11 +9,13 @@ body {
 body.home {
 	/*background:#639046 url(/images/home-bg.jpg) top center no-repeat;*/
 	/*background:#639046 url(/images/nice-tree.jpeg) top center no-repeat;*/
-	background:#8DC420 url(/images/hummingbird.jpg) top center no-repeat;
+	background:#93BF39 url(/images/hummingbird.jpg) top center no-repeat;
 	/*background-size: contain;*/
 	background-size: 1280px 800px;
 }
 /* - */
+
+
 
 a {
 	color:#efffa7;
@@ -142,6 +144,9 @@ hr {
 .hr.thin {
 	height:1px;
 	margin-top:5px;
+	/*position: relative 0px 200px;*/
+	/*margin-left: 130px;
+	width: 905px;*/
 }
 .hr.tall {
 	margin-bottom:30px;
@@ -424,7 +429,7 @@ table .width25 {
 /* - */
 
 #railscontent {
-	min-height: 660px;
+	/*max-height: 300px;*/
 }
 
 #main form {
@@ -532,6 +537,11 @@ table .width25 {
 	width:1140px;
 	margin:0 auto;
 	overflow:visible;
+}
+
+#body_content_title {
+	color: #efffa7;
+	font-size: 2.5em;
 }
 /* - */
 
@@ -729,10 +739,10 @@ table .width25 {
 }
 
 .cms-content {
-	width: 850px;
+	width: 820px;
 	float: left;
 	/*border: 1px solid black;*/
-	padding-left: 15px;
+	padding-left: 35px;
 }
 
 .system-message, .system-error-message {
