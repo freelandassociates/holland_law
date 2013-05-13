@@ -601,7 +601,7 @@ table .width25 {
  *top:20px;
 	top:0px\9;
 	right:-20px;
-	background: url(/images/top-nav-sub-bg.gif) left bottom repeat-x;
+	/*background: url(/images/top-nav-sub-bg.gif) left bottom repeat-x;*/
 	z-index:100000;
 	/*width:140px;*/
 	width:450px;

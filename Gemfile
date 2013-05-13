@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
+# gem 'rails'
 # gem 'rails_superfish', '~> 0.1.8'
 
 # Bundle edge Rails instead:
@@ -53,9 +54,11 @@ gem 'jquery-ui-rails'
 
 # Refinery CMS
 gem 'refinerycms', '~> 2.0.0'
+# gem 'refinerycms', :git => 'https://github.com/refinery/refinerycms.git'
 
 # Specify additional Refinery CMS Extensions here (all optional):
 gem 'refinerycms-i18n', '~> 2.0.0'
+# gem 'refinerycms-i18n', :git => 'https://github.com/refinery/refinerycms-i18n.git'
 #  gem 'refinerycms-blog', '~> 2.0.0'
 #  gem 'refinerycms-inquiries', '~> 2.0.0'
 #  gem 'refinerycms-search', '~> 2.0.0'
@@ -65,4 +68,4 @@ gem 'bourbon'
 
 gem 'newrelic_rpm'
 
-# gem 'rack-mini-profiler'
+gem 'rack-mini-profiler'
