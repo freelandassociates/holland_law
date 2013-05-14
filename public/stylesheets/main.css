@@ -636,9 +636,11 @@ table .width25 {
 	text-align:left;
 }
 
+
+
 #bar ul li ul li.first a, #bar ul li ul li.last a, #bar ul li ul li a {
 	color:#6d8b1b;
-	padding:10px 5px 10px 20px;
+	padding:5px 5px 5px 20px;
 	margin:0;
 	text-align:left;
 	line-height:18px;
@@ -650,6 +652,21 @@ table .width25 {
 #bar ul li ul li a:hover {
 	color:#433b36;
 }
+
+
+#bar ul li ul li a.menu_second_level {
+	/*color: red;*/
+	font-size: 15px;
+	line-height: 16px;
+	padding-left: 40px;
+	padding-top: 0px;
+	padding-bottom: 4px;
+}
+
+#bar ul li ul li a.menu_second_level:hover {
+	/*color: blue;*/
+}
+
 #mainnav ul li ul li {
 	height:30px;
 	background-color:#000;
