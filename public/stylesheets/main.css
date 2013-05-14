@@ -673,6 +673,30 @@ table .width25 {
 	border-bottom:#CCC 1px solid;
 	padding:10px;
 }
+
+
+#megamenu3 {
+	/*border: solid 1px white;*/
+	height: 470px;
+	width: 750px;
+	background-color: #DDE6D7;
+}
+
+#megamenu31 {
+	/*border: solid 1px red;*/
+	width:360px;
+	height: 470px;
+	float: left;
+	display: inline-block;
+}
+
+#megamenu32 {
+	/*border: solid 1px blue;*/
+	width: 380px;
+	float: left;
+	display: inline-block;
+}
+
 /* - */
 .green h3 {
 	color: #86B75E;
