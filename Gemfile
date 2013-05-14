@@ -68,4 +68,4 @@ gem 'bourbon'
 
 gem 'newrelic_rpm'
 
-gem 'rack-mini-profiler'
+# gem 'rack-mini-profiler'
