@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/johnbintz/caroufredsel-rails.git
+  revision: 81bb0c362e26ac76c714d49a2e02e076a433a039
+  specs:
+    caroufredsel-rails (6.1.0)
+      coffee-script
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -216,6 +223,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   bourbon
+  caroufredsel-rails!
   coffee-rails (~> 3.2.1)
   fog
   jquery-rails (~> 2.0.0)
