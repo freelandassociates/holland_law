@@ -72,6 +72,8 @@ GEM
     excon (0.21.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    fancybox-rails (0.2.1)
+      railties (>= 3.1.0)
     fog (1.9.0)
       builder
       excon (~> 0.14)
@@ -225,6 +227,7 @@ DEPENDENCIES
   bourbon
   caroufredsel-rails!
   coffee-rails (~> 3.2.1)
+  fancybox-rails
   fog
   jquery-rails (~> 2.0.0)
   jquery-ui-rails

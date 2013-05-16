@@ -1,3 +1,51 @@
+#railscontent {
+	/*background-color: #DFEBCC;*/
+	background-color: #E4EFD5;
+	margin-top: 3px;
+	padding-left: 15px;
+	padding-right: 15px;
+	height: 418px;
+	opacity: 0.8;
+	color: #433b36;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+#railscontent h1 {
+	color: #433b36;
+	padding-top: 5px;
+}
+
+#body {
+	height: 328px;
+	overflow: scroll;
+}
+
+
+.image_carousel {
+    padding: 15px 0 15px 40px;
+}
+.image_carousel img {
+    border: 1px solid #ccc;
+    background-color: white;
+    padding: 9px;
+    margin: 7px;
+    display: block;
+    float: left;
+}
+.image_carousel a {
+    display: block;
+    float: left;
+}
+.clearfix {
+    float: none;
+    clear: both;
+}
+
+
+
+
+
 body {
 	color:#fff;
 	font-size:1em;
@@ -274,7 +322,7 @@ h3.archive {
 /* - */
 
 strong {
-	color:#efffa7;
+	color:#433b36;
 	font-weight:bold;
 }
 em {
@@ -1053,7 +1101,7 @@ ul.footer-nav li a:hover {
 #main ul li {
 	margin:10px 10px 0px 30px;
 	padding:0;
-  color:#fff;
+  color:#433b36;
 }
 #main .green {
 	/*background:#d8e3d1 url(/images/green-box-bg.gif) top left repeat-x;*/
