@@ -40,17 +40,23 @@ $(document).ready(function () {
 	// });
 
 	$("#carousel_items").carouFredSel();
-	$("#carousel_items a").fancybox({
-		cyclic  : true,
-		onStart : function() {
-			$("#carousel_items").trigger("pause");
-		},
-		onClosed: function() {
-			$("#carousel_items").trigger("play");
-		}
+	// $("#carousel_items a").fancybox();
+
+	$(".video").click(function() {
+		$.fancybox({
+			'padding'		: 0,
+			'autosize'		: false,
+			'transitionIn'	: 'none',
+			'transitionOut'	: 'none',
+			'title'			: this.title,
+			'width'			: 640,
+			'height'		: 385,
+			'href'			: this.href.replace(new RegExp("watch\\?v=", "i"), 'v/'),
+			'type'			: 'iframe'
+		});
+
+		return false;
 	});
-
-
 
 });
 
