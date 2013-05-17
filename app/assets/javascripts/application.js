@@ -17,7 +17,6 @@
 //= require superfish
 //= require hoverIntent
 //= require caroufredsel
-//= require fancybox
 //= require_tree .
 
 $(document).ready(function () {
