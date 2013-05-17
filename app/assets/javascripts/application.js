@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.ui.all
+//= require prettyphoto-rails
 //= require superfish
 //= require hoverIntent
 //= require caroufredsel
@@ -31,31 +32,13 @@ $(document).ready(function () {
 		$("#accordion").accordion({ active: 0});
 	}
 
-	// carousel = new Carousel(
-	// 	$('#carousel_items'),
-	// 	{
-	// 		onChange: function(items) {
-	// 		// something when the items change
-	// 	}
-	// });
+	$("a[rel^='prettyPhoto']").prettyPhoto({
+		default_width: 800,
+		default_height: 544
+	});
 
-	$("#carousel_items").carouFredSel();
-	// $("#carousel_items a").fancybox();
-
-	$(".video").click(function() {
-		$.fancybox({
-			'padding'		: 0,
-			'autosize'		: false,
-			'transitionIn'	: 'none',
-			'transitionOut'	: 'none',
-			'title'			: this.title,
-			'width'			: 640,
-			'height'		: 385,
-			'href'			: this.href.replace(new RegExp("watch\\?v=", "i"), 'v/'),
-			'type'			: 'iframe'
-		});
-
-		return false;
+	$("#carousel_items").carouFredSel({
+		scroll: 1
 	});
 
 });

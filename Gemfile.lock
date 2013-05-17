@@ -121,6 +121,11 @@ GEM
       railties (~> 3.0)
     pg (0.15.1)
     polyglot (0.3.3)
+    prettyphoto-rails (0.2.1)
+      jquery-rails
+      rails (>= 3.1)
+      sass-rails
+      uglifier
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -235,6 +240,7 @@ DEPENDENCIES
   net-scp (= 1.0.4)
   newrelic_rpm
   pg
+  prettyphoto-rails
   rails (= 3.2.3)
   refinerycms (~> 2.0.0)
   refinerycms-i18n (~> 2.0.0)
