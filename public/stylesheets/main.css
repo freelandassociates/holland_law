@@ -23,13 +23,16 @@
 
 
 .image_carousel {
-    padding: 15px 0 15px 40px;
+    padding: 35px 0 15px 0;
+    margin-top: 20px;
+    display: block;
 }
+
 .image_carousel img {
     border: 1px solid #ccc;
     background-color: white;
-    padding: 9px;
-    margin: 7px;
+    padding: 4px;
+    margin: 5px;
     display: block;
     float: left;
 }
@@ -902,6 +905,13 @@ table .width25 {
 	padding-left: 35px;
 }
 
+.cms-content-home {
+	width: 820px;
+	float: left;
+	/*border: 1px solid black;*/
+	padding-left: 20px;
+}
+
 .system-message, .system-error-message {
 	background-color: transparent;
 	border: 0px;
@@ -1088,9 +1098,11 @@ ul.footer-nav li a:hover {
 	padding:15px 0px;
 }
 #main a {
-	border-bottom:1px dotted #efffa7;
+	color: #433b36;
+	border-bottom:1px dotted #433b36;
 }
 #main a:hover {
+	color: #b9d45a;
 	border-color:#b9d45a;
 }
 #main ul {

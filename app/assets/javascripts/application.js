@@ -37,7 +37,8 @@ $(document).ready(function () {
 	});
 
 	$("#carousel_items").carouFredSel({
-		scroll: 1
+		scroll: 1,
+		items: 4
 	});
 
 });
