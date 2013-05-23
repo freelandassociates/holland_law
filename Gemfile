@@ -36,7 +36,6 @@ end
 
 gem 'jquery-rails', '~> 2.0.0'
 gem 'jquery-ui-rails'
-gem 'jquery-cookie-rails'
 gem 'prettyphoto-rails'
 
 gem 'caroufredsel-rails', :git => 'git://github.com/johnbintz/caroufredsel-rails.git'
