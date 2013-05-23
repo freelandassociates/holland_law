@@ -41,5 +41,12 @@ $(document).ready(function () {
 		items: 4
 	});
 
+	// if lastChar is a / this is the homepage of the site..
+	var lastChar = window.location.href.substr(window.location.href.length - 1);
+	// alert(lastChar);
+	if (lastChar == '/') {
+		$.prettyPhoto.open('https://www.youtube.com/watch?v=GZotUexhlBU&amp;rel=0','Holland Law and Title - A Fresh Approach','Holland Law and Title - A Fresh Approach');
+	}
+
 });
 
