@@ -1,3 +1,28 @@
+.addresses {
+	/*border: 1px solid gray;*/
+	height: 20px;
+	clear: both;
+}
+
+.maillink {
+	font-size: 12px;
+	/*border: 1px solid red;*/
+	display: inline-block;
+	float: left;
+	margin-top: 2px;
+	margin-left: 8px;
+	padding: 0px;
+}
+
+.smlogo {
+	height: 16px;
+	width: 16px;
+	/*border: 1px solid black;*/
+	display: inline-block;
+	margin-left: 5px;
+
+}
+
 #railscontent {
 	/*background-color: #DFEBCC;*/
 	background-color: #E4EFD5;
@@ -246,9 +271,11 @@ h3.archive {
 	width:180px;
 }
 .col.c25 {
-	width:220px;
+	width:380px;
 	height: 270px;
+	color: #433b36;
 }
+
 .col.c30 {
 	width:250px;
 }
