@@ -1,0 +1,829 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Should I buy an Investment Property or Rental Home?</title>
+<meta name="Description" content="Mortgage Calculator for investment property or rental home cash flow and net worth calculator">
+<meta name="keywords" content="investment property calculator, rental home calculator, should I buy a rental property, cash flow on rental properties">
+<meta name="robots" content="ALL">
+<meta name="revisit-after" content="21 days">
+<link href="/css/main.css" rel="stylesheet" type="text/css" />
+<link href="/css/table_css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" language="JavaScript1.2" src="/js/stmenu.js"></script>
+<script type="text/javascript" language="JavaScript1.2" src="/js/main.js"></script>
+<!-- UNAUTHORIZED COPYING OF THIS DOCUMENT, AND/OR COPYRIGHT INFRINGEMENT IS PROHIBITED BY LAW. WE WILL VIGOROUSLY PROSECUTE THE OFFENDERS.-->
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function checkNumber(input, min, max, msg)
+{
+    msg = msg + " field has invalid data: " + input.value;
+
+    var str = input.value;
+    for (var i = 0; i < str.length; i++) {
+        var ch = str.substring(i, i + 1)
+        if ((ch < "0" || "9" < ch) && ch != '.') {
+            alert(msg);
+            return false;
+        }
+    }
+    var num = 0 + str
+    if (num < min || max < num) {
+        alert(msg + " not in range [" + min + ".." + max + "]");
+        return false;
+    }
+    input.value = str;
+    return true;
+}
+
+function computeField(input)
+{
+    if (input.value != null && input.value.length != 0)
+        input.value = "" + eval(input.value);
+      computeForm(input.form);
+}
+
+function computeForm(form)
+{
+    if ((form.income.value == null || form.income.value.length == 0) ||
+        (form.purchase_cost.value == null || form.purchase_cost.value.length == 0) ||
+        (form.deposit.value == null || form.deposit.value.length == 0) ||
+        (form.cpi.value == null || form.cpi.value.length == 0) ||
+        (form.rental_rate.value == null || form.rental_rate.value.length == 0) ||
+        (form.rental_growth.value == null || form.rental_growth.value.length == 0) ||
+        (form.capital_growth.value == null || form.capital_growth.value.length == 0) ||
+        (form.other_exp.value == null || form.other_exp.value.length == 0) ||
+        (form.total_borrowed.value == null || form.total_borrowed.value.length == 0) ||
+        (form.loan_interest.value == null || form.loan_interest.value.length == 0))
+
+        {return;}
+
+    if (!checkNumber(form.income, 0,9999999, "Your Income") ||
+        !checkNumber(form.purchase_cost, 0,9999999, "Purchase Cost") ||
+        !checkNumber(form.deposit, 0,9999999, "Deposit") ||
+        !checkNumber(form.cpi, 1,15, "CPI Rate") ||
+        !checkNumber(form.rental_rate, 0,9999999, "Rental Charged") ||
+        !checkNumber(form.rental_growth, 1,15, "Rental Growth Rate") ||
+        !checkNumber(form.capital_growth, 1,20, "Capital Growth Rate") ||
+        !checkNumber(form.loan_interest, 1,100, "Loan Interest Rate")) 
+        {return;}       
+  
+  var a1 = form.purchase_cost.value *1
+  var a2 = form.deposit.value *1
+  form.total_borrowed.value = parseInt ( a1 - a2 ) 
+
+    
+  <!-- calculate the payment -->
+  
+var i = form.loan_interest.value;
+
+if (i > 1.0) {i = i / 100.0;}
+i /= 12;
+
+    var pow = 1;
+
+    for (var j = 0; j < (12*form.ly.value); j++)
+
+        pow = pow * (1 + i);
+
+    form.payment.value = parseInt((form.total_borrowed.value * pow * i) / (pow - 1))
+
+<!-- done with payment calc -->
+  
+  
+  var a9 = ( a1 - a2 ) 
+
+  var b1=form.rental_rate.value;
+
+
+  var b2 = form.rental_growth.value *1
+  var b3 = form.cpi.value *1
+  var b4 = form.loan_interest.value *1
+  var b5 = form.capital_growth.value *1
+  form.ri1.value = parseInt ( b1 * 12 )
+  form.ri2.value = parseInt (( b1 * 12 ) * (1+(b2/100)))
+  form.ri3.value = parseInt (( b1 * 12 ) * (1+(b2/100)) * (1+(b2/100)))
+  form.ri4.value = parseInt (( b1 * 12 ) * (1+(b2/100)) * (1+(b2/100)) * (1+(b2/100)))
+  form.ri5.value = parseInt (( b1 * 12 ) * (1+(b2/100)) * (1+(b2/100)) * (1+(b2/100)) * (1+(b2/100)))
+  
+  form.ri21.value = form.ri1.value
+  form.ri22.value = form.ri2.value
+  form.ri23.value = form.ri3.value
+  form.ri24.value = form.ri4.value
+  form.ri25.value = form.ri5.value
+  
+  form.r1.value = form.hoi.value
+  form.r2.value = parseInt (form.hoi.value * (1+(b3/100)))
+  form.r3.value = parseInt (form.hoi.value * (1+(b3/100)) * (1+(b3/100)))
+  form.r4.value = parseInt (form.hoi.value * (1+(b3/100)) * (1+(b3/100)) * (1+(b3/100)))
+  form.r5.value = parseInt (form.hoi.value * (1+(b3/100)) * (1+(b3/100)) * (1+(b3/100)) * (1+(b3/100)))
+  form.othe1.value = parseInt (form.other_exp.value * 12)
+  form.othe2.value = parseInt ((form.other_exp.value * 12) * (1+(b3/100)))
+  form.othe3.value = parseInt ((form.other_exp.value * 12) * (1+(b3/100)) * (1+(b3/100)))
+  form.othe4.value = parseInt ((form.other_exp.value * 12) * (1+(b3/100)) * (1+(b3/100)) * (1+(b3/100)))
+  form.othe5.value = parseInt ((form.other_exp.value * 12) * (1+(b3/100)) * (1+(b3/100)) * (1+(b3/100)) * (1+(b3/100)))
+  form.tp1.value = parseInt (form.payment.value *12)
+  form.tp2.value = parseInt (form.payment.value *12)
+  form.tp3.value = parseInt (form.payment.value *12)
+  form.tp4.value = parseInt (form.payment.value *12)
+  form.tp5.value = parseInt (form.payment.value *12)
+  form.fl1.value = form.yt.value
+  form.fl2.value = parseInt (form.yt.value * (1+(b3/100)))
+  form.fl3.value = parseInt (form.yt.value * (1+(b3/100)) * (1+(b3/100))) 
+  form.fl4.value = parseInt (form.yt.value * (1+(b3/100)) * (1+(b3/100)) * (1+(b3/100))) 
+  form.fl5.value = parseInt (form.yt.value * (1+(b3/100)) * (1+(b3/100)) * (1+(b3/100)) * (1+(b3/100))) 
+  <!-- hardcore the interest expense times number for rounding down each year - no amortization - est recalc principle -->
+  form.ia1.value = parseInt ((a9 * ( b4 / 100 )) *1.0)
+  form.prin1.value = parseInt ((form.payment.value *12)- (form.ia1.value*1))
+
+  form.ia2.value = parseInt ((a9 * ( b4 / 100 )) *.985)
+    form.prin2.value = parseInt ((form.payment.value *12)- (form.ia2.value*1))
+
+  form.ia3.value = parseInt ((a9 * ( b4 / 100 )) *.97)
+  form.prin3.value = parseInt ((form.payment.value *12)- (form.ia3.value*1))
+  
+  form.ia4.value = parseInt ((a9 * ( b4 / 100 )) *.96)
+  form.prin4.value = parseInt ((form.payment.value *12)- (form.ia4.value*1))
+  
+  form.ia5.value = parseInt ((a9 * ( b4 / 100 )) *.95)
+  form.prin5.value = parseInt ((form.payment.value *12)- (form.ia5.value*1))
+  
+  form.to1.value = (form.r1.value *1) + (form.othe1.value * 1) + (form.fl1.value *1) + (form.tp1.value *1)
+  form.to2.value = (form.r2.value *1) + (form.othe2.value * 1) + (form.fl2.value *1) + (form.tp2.value *1)
+  form.to3.value = (form.r3.value *1) + (form.othe3.value * 1) + (form.fl3.value *1) + (form.tp3.value *1)
+  form.to4.value = (form.r4.value *1) + (form.othe4.value * 1) + (form.fl4.value *1) + (form.tp4.value *1)
+  form.to5.value = (form.r5.value *1) + (form.othe5.value * 1) + (form.fl5.value *1) + (form.tp5.value *1)
+  form.rs1.value = (form.ri1.value *1)-(form.to1.value *1) 
+  form.rs2.value = (form.ri2.value *1)-(form.to2.value *1) 
+  form.rs3.value = (form.ri3.value *1)-(form.to3.value *1)
+  form.rs4.value = (form.ri4.value *1)-(form.to4.value *1)
+  form.rs5.value = (form.ri5.value *1)-(form.to5.value *1)
+  <!-- straight line 27.5 year dep -->
+  <!-- subtract 10 percent of value for land -->
+  var nolandvalue = (form.purchase_cost.value * .90)
+  form.d1.value = parseInt (nolandvalue / 27.5)
+  form.d2.value = parseInt (nolandvalue / 27.5)
+  form.d3.value = parseInt (nolandvalue / 27.5) 
+  form.d4.value = parseInt (nolandvalue / 27.5) 
+  form.d5.value = parseInt (nolandvalue / 27.5)
+  
+  <!--  total expenses for tax calc -->
+  
+  form.totexp1.value = (form.r1.value *1) + (form.othe1.value * 1) + (form.fl1.value *1)
+  form.totexp2.value = (form.r2.value *1) + (form.othe2.value * 1) + (form.fl2.value *1)
+  form.totexp3.value = (form.r3.value *1) + (form.othe3.value * 1) + (form.fl3.value *1)
+  form.totexp4.value = (form.r4.value *1) + (form.othe4.value * 1) + (form.fl4.value *1)
+  form.totexp5.value = (form.r5.value *1) + (form.othe5.value * 1) + (form.fl5.value *1)
+  
+<!-- subtract out total payment and add in interest expense for tax calculation -->
+
+  form.tc1.value = (form.d1.value *1) - (form.rs1.value *1) - (form.tp1.value*1) + (form.ia1.value*1)
+  form.tc2.value = (form.d2.value *1) - (form.rs2.value *1) - (form.tp2.value*1) + (form.ia2.value*1)
+  form.tc3.value = (form.d3.value *1) - (form.rs3.value *1) - (form.tp3.value*1) + (form.ia3.value*1)
+  form.tc4.value = (form.d4.value *1) - (form.rs4.value *1) - (form.tp4.value*1) + (form.ia4.value*1)
+  form.tc5.value = (form.d5.value *1) - (form.rs5.value *1) - (form.tp5.value*1) + (form.ia5.value*1)
+
+  var c0=((form.income.value*1) * 1.017)
+  if(c0<26250) {var tax0=(c0)*0.15}
+  else if(c0<63550) {var tax0=((c0-26250)*0.28)+3937.50}
+  else if(c0<132600) {var tax0=((c0-63550)*0.31)+14381.50}
+  else if(c0<288351) {var tax0=((c0-132600)*0.36)+35787}
+  else if(c0>288350) {var tax0=((c0-288351)*0.396)+91857};
+
+  var c1=(((form.income.value*1) * 1.017) - (form.tc1.value *1))
+  if(c1<26250) {var tax1=(c1)*0.15}
+  else if(c1<63550) {var tax1=((c1-26250)*0.28)+3937.50}
+  else if(c1<132600) {var tax1=((c1-63550)*0.31)+14381.50}
+  else if(c1<288351) {var tax1=((c1-132600)*0.36)+35787}
+  else if(c1>288350) {var tax1=((c1-288351)*0.396)+91857};
+
+  var c2=(((form.income.value*1) * 1.017) - (form.tc2.value *1))
+  if(c2<26250) {var tax2=(c2)*0.15}
+  else if(c2<63550) {var tax2=((c2-26250)*0.28)+3937.50}
+  else if(c2<132600) {var tax2=((c2-63550)*0.31)+14381.50}
+  else if(c2<288351) {var tax2=((c2-132600)*0.36)+35787}
+  else if(c2>288350) {var tax2=((c2-288351)*0.396)+91857};
+
+  var c3=(((form.income.value*1) * 1.017) - (form.tc3.value *1))
+  if(c3<26250) {var tax3=(c3)*0.15}
+  else if(c3<63550) {var tax3=((c3-26250)*0.28)+3937.50}
+  else if(c3<132600) {var tax3=((c3-63550)*0.31)+14381.50}
+  else if(c3<288351) {var tax3=((c3-132600)*0.36)+35787}
+  else if(c3>288350) {var tax3=((c3-288351)*0.396)+91857};
+
+  var c4=(((form.income.value*1) * 1.017) - (form.tc4.value *1))
+  if(c4<26250) {var tax4=(c4)*0.15}
+  else if(c4<63550) {var tax4=((c4-26250)*0.28)+3937.50}
+  else if(c4<132600) {var tax4=((c4-63550)*0.31)+14381.50}
+  else if(c4<288351) {var tax4=((c4-132600)*0.36)+35787}
+  else if(c4>288350) {var tax4=((c4-288351)*0.396)+91857};
+
+  var c5=(((form.income.value*1) * 1.017) - (form.tc5.value *1))
+  if(c5<26250) {var tax5=(c5)*0.15}
+  else if(c5<63550) {var tax5=((c5-26250)*0.28)+3937.50}
+  else if(c5<132600) {var tax5=((c5-63550)*0.31)+14381.50}
+  else if(c5<288351) {var tax5=((c5-132600)*0.36)+35787}
+  else if(c5>288350) {var tax5=((c5-288351)*0.396)+91857};
+
+  form.tax1.value = parseInt (tax0 - tax1)
+  form.tax2.value = parseInt (tax0 - tax2)
+  form.tax3.value = parseInt (tax0 - tax3)
+  form.tax4.value = parseInt (tax0 - tax4)
+  form.tax5.value = parseInt (tax0 - tax5)
+
+  form.at1.value = (form.tax1.value *1) + (form.ri1.value *1) - (form.to1.value *1)
+  form.at2.value = (form.tax2.value *1) + (form.ri2.value *1) - (form.to2.value *1)
+  form.at3.value = (form.tax3.value *1) + (form.ri3.value *1) - (form.to3.value *1)
+  form.at4.value = (form.tax4.value *1) + (form.ri4.value *1) - (form.to4.value *1)
+  form.at5.value = (form.tax5.value *1) + (form.ri5.value *1) - (form.to5.value *1)
+
+  form.cg1.value = parseInt (a1 * (1+(b5/100)) )
+  form.cg2.value = parseInt (a1 * (1+(b5/100)) * (1+(b5/100)) )
+  form.cg3.value = parseInt (a1 * (1+(b5/100)) * (1+(b5/100)) * (1+(b5/100)) )
+  form.cg4.value = parseInt (a1 * (1+(b5/100)) * (1+(b5/100)) * (1+(b5/100)) * (1+(b5/100)) )
+  form.cg5.value = parseInt (a1 * (1+(b5/100)) * (1+(b5/100)) * (1+(b5/100)) * (1+(b5/100)) * (1+(b5/100)) )
+  
+  form.nw1.value = (form.at1.value *1) + ((form.cg1.value *1)-(form.purchase_cost.value *1) +(form.prin1.value*1))
+  form.nw2.value = (form.at2.value *1) + ((form.cg2.value *1)-(form.cg1.value *1) +(form.prin2.value*1))
+  form.nw3.value = (form.at3.value *1) + ((form.cg3.value *1)-(form.cg2.value *1) +(form.prin3.value*1))
+  form.nw4.value = (form.at4.value *1) + ((form.cg4.value *1)-(form.cg3.value *1) +(form.prin4.value*1))
+  form.nw5.value = (form.at5.value *1) + ((form.cg5.value *1)-(form.cg4.value *1) +(form.prin5.value*1))
+}
+//-->
+</SCRIPT>
+<body>
+<div id="main">
+
+<div id="header">
+
+<div id="headlink">
+ 
+<!-- End text area under menu -->
+</div>
+</div>
+
+<style>
+  td {
+    font-family: arial;
+    font-size: 14px;
+  }
+</style>
+
+<div id="content">
+
+<div id="bodycontainer">
+<div id="bodycopy"><!-- all of your page content goes within this div -->
+  
+    <div class="up_content font12 width700">
+<form name="rentform">
+  <div align="left">
+    <table class="Calc_Box">
+      <tr class="Calc_Header">
+        <td width="100%">
+        <strong>INSTRUCTIONS</strong></td>
+      </tr>
+      <tr>
+        <td width="100%">
+        This calculator is designed to provide a guide to possible financial 
+        outcomes of the purchase and rental of an investment property.&nbsp;
+        After entering your values, click once in any result box to calculate
+        or update your results. <br>
+&nbsp;&nbsp; 
+<TABLE class="Calc_Box" width="100%">
+<TR class="Calc_Header">
+<th colspan="2" align="left">
+ENTER TRANSACTION DETAILS HERE 
+</th>
+<TD>&nbsp;
+
+</TD>
+<TD>&nbsp;
+
+</TD></TR>
+<TR>
+<TD>
+<b>
+<font face="arial" color="#008000">Purchase Price</font> </b>
+</TD>
+<TD>
+<b>$</b> <INPUT TYPE=text NAME="purchase_cost" VALUE=0 SIZE=7 onChange=computeField(this)> 
+</TD>
+<TD>
+<b><font face="arial" color="#008000">Homeowners Insurance</font></b></TD>
+<TD>
+
+<b>$</b> 
+<INPUT TYPE=text NAME="hoi" VALUE=500 SIZE=5 onChange=computeField(this)>
+          
+          </TD></TR>
+<TR>
+<TD>
+<b>
+<font face="arial" color="#008000">Down Payment</font> </b>
+</TD>
+<TD>
+<b>$</b> <INPUT TYPE=text NAME="deposit" VALUE=0 SIZE=7 onChange=computeField(this)> 
+</TD>
+<TD>
+
+<b>
+<font color="#008000">Yearly Taxes</font> </b>
+</TD>
+<TD>
+
+<b>$</b> 
+<INPUT TYPE=text NAME="yt" VALUE=1000 SIZE=6 onChange=computeField(this)>
+          
+          </TD></TR>
+<TR>
+<TD>
+
+<b>
+<font face="Arial" color="#008000">Loan Interest Rate</font> </b>
+</TD>
+<TD>
+
+&nbsp;<INPUT TYPE=text NAME="loan_interest" VALUE=7.5 SIZE=5 onChange=computeField(this)>
+<b>%</b></TD>
+<TD>
+
+<b>
+<font color="#008000">Monthly expenses/<br>
+Maintenance fees</font></b></TD>
+<TD>
+<b>$</b> 
+<INPUT TYPE=text NAME="other_exp" VALUE=0 SIZE=4 onChange=computeField(this)>
+          
+          </TD></TR>
+<TR>
+<TD>
+<b><font face="arial" color="#008000">Loan Term in Years</font></b></TD>
+<TD>
+&nbsp;<INPUT TYPE=text NAME="ly" VALUE=30 SIZE=4 onChange=computeField(this)></TD>
+<TD>&nbsp;
+</TD>
+<TD>&nbsp;
+</TD></TR>
+<TR>
+<TD>&nbsp;
+</TD>
+<TD>&nbsp;
+</TD>
+<TD>&nbsp;
+</TD>
+<TD>&nbsp;
+</TD></TR>
+<TR>
+<TD>
+<font face="arial" color="#008000">
+Monthly Rental</font></TD>
+<TD>
+<b>$</b> 
+<INPUT TYPE=text NAME="rental_rate" VALUE=0 SIZE=5 onChange=computeField(this)> 
+</TD>
+<TD><!--- <b><font face="arial" color="#008000">Vacancy Rates </font></b> ---></TD>
+<TD><!--- <input type="text" name="Vacancy" value="5.0" size="5" onchange="computeField(this)" />
+  <b>%</b> ---> </TD>
+</TR>
+<TR>
+<TD>
+<b>
+<font face="arial" color="#008000"> Rent Increase Yearly</font> </b>
+</TD>
+<TD>
+&nbsp;&nbsp; 
+<INPUT TYPE=text NAME="rental_growth" VALUE=4.0 SIZE=5 onChange=computeField(this)>
+<b>%</b>
+</TD>
+<TD>
+<b>&nbsp; </b>
+</TD>
+<TD>&nbsp;
+
+</TD></TR>
+<TR>
+<TD>&nbsp;
+</TD>
+<TD>&nbsp;
+</TD>
+<TD>&nbsp;
+</TD>
+<TD>&nbsp;
+</TD></TR>
+<TR>
+<TD>
+<font face="arial" color="#008000"><b>Inflation</b></font><b><font color="#008000"><br>
+</font>
+</b>(for ins, taxes, expenses)</font></TD>
+<TD>
+&nbsp;&nbsp; 
+<INPUT TYPE=text NAME="cpi" VALUE=4.0 SIZE=5 onChange=computeField(this)>
+<b>%</b>
+</TD>
+<TD>
+<strong>
+Your Gross Income <br>
+</strong>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (for tax calculation)</TD>
+<TD>
+
+<b>$</b> <INPUT TYPE=text NAME="income" VALUE=0 SIZE=7 onChange=computeField(this)>
+          
+          </TD></TR>
+<TR>
+<TD>
+<strong>Property Value Growth</strong><br>
+(real estate appreciation) </font>
+</TD>
+<TD>
+&nbsp;&nbsp; 
+<INPUT TYPE=text NAME="capital_growth" VALUE=6.0 SIZE=5 onChange=computeField(this)>
+<b>%</b>
+</TD>
+<TD>&nbsp;
+</TD>
+<TD>
+&nbsp;&nbsp;&nbsp;
+      
+          
+          </TD></TR>
+<TR>
+<TD>
+&nbsp;&nbsp;
+</TD>
+<TD>&nbsp;
+
+</TD>
+<TD>&nbsp;
+
+</TD>
+<TD>&nbsp;
+
+</TD></TR>
+<TR class="Calc_Header">
+<th align="left">
+RESULTS</font></th>
+<TD>&nbsp;
+
+</TD>
+<TD>&nbsp;
+
+</TD>
+<TD>&nbsp;
+
+</TD></TR>
+<TR class="Calc_Results">
+<TD align="right"><b>Loan Amount&nbsp;&nbsp;&nbsp;</b></TD>
+<TD>
+
+      &nbsp;<b>$</b> <INPUT TYPE=text NAME="total_borrowed" VALUE=0 SIZE=7 onChange=computeField(this)></TD>
+<TD align="right">
+<b>Monthly Payment&nbsp;&nbsp;&nbsp;</font></TD>
+<TD>
+&nbsp;<b>$</b>
+<INPUT TYPE=text NAME="payment" VALUE=0 SIZE=5 onChange=computeField(this)></TD></TR></TABLE>
+<table class="Calc_Box" width="100%">
+  <tr>
+    <td><STRONG>INCOME</STRONG>
+    </td>
+    <td align="center" bgcolor="#808080"><STRONG>Year 1</STRONG>
+    </td>
+    <td align="center" bgcolor="#808080"><STRONG>Year 2</STRONG>
+    </td>
+    <td align="center" bgcolor="#808080"><STRONG>Year 3</STRONG>
+    </td>
+    <td align="center" bgcolor="#808080"><STRONG>Year 4</STRONG>
+    </td>
+    <td align="center" bgcolor="#808080"><STRONG>Year 5</STRONG>
+    </td>
+  </tr>
+  <tr>
+    <td>Rental Income
+    </td>
+    <td><INPUT TYPE=text NAME="ri1" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+    <td><INPUT TYPE=text NAME="ri2" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+    <td><INPUT TYPE=text NAME="ri3" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+    <td><INPUT TYPE=text NAME="ri4" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+    <td><INPUT TYPE=text NAME="ri5" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>EXPENSES</strong>
+    </td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Insurance</td>
+    <td><INPUT TYPE=text NAME="r1" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+    <td><INPUT TYPE=text NAME="r2" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+    <td><INPUT TYPE=text NAME="r3" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+    <td><INPUT TYPE=text NAME="r4" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+    <td><INPUT TYPE=text NAME="r5" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+  </tr>
+  <tr>
+    <td>Taxes</td>
+    <td><INPUT TYPE=text NAME="fl1" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+    <td><INPUT TYPE=text NAME="fl2" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+    <td><INPUT TYPE=text NAME="fl3" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+    <td><INPUT TYPE=text NAME="fl4" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+    <td><INPUT TYPE=text NAME="fl5" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+  </tr>
+  <tr>
+    <td>Monthly Expenses/Fees</td>
+    <td>
+      <INPUT TYPE=text NAME="othe1" VALUE=0 SIZE=7 onChange=computeField(this)></td>
+    <td>
+      <INPUT TYPE=text NAME="othe2" VALUE=0 SIZE=7 onChange=computeField(this)></td>
+    <td>
+      <INPUT TYPE=text NAME="othe3" VALUE=0 SIZE=7 onChange=computeField(this)></td>
+    <td>
+      <INPUT TYPE=text NAME="othe4" VALUE=0 SIZE=7 onChange=computeField(this)></td>
+    <td>
+      <INPUT TYPE=text NAME="othe5" VALUE=0 SIZE=7 onChange=computeField(this)></td>
+  </tr>
+  <tr>
+    <td>Total Payments</td>
+    <td>
+      <INPUT TYPE=text NAME="tp1" VALUE=0 SIZE=7 onChange=computeField(this)></td>
+    <td>
+      <INPUT TYPE=text NAME="tp2" VALUE=0 SIZE=7 onChange=computeField(this)></td>
+    <td>
+      <INPUT TYPE=text NAME="tp3" VALUE=0 SIZE=7 onChange=computeField(this)></td>
+    <td>
+      <INPUT TYPE=text NAME="tp4" VALUE=0 SIZE=7 onChange=computeField(this)></td>
+    <td>
+      <INPUT TYPE=text NAME="tp5" VALUE=0 SIZE=7 onChange=computeField(this)></td>
+  </tr>
+  <tr>
+    <td><STRONG>Total Expenses</STRONG>
+    </td>
+    <td><INPUT TYPE=text NAME="to1" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+    <td><INPUT TYPE=text NAME="to2" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+    <td><INPUT TYPE=text NAME="to3" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+    <td><INPUT TYPE=text NAME="to4" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+    <td><INPUT TYPE=text NAME="to5" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+  </tr>
+  <tr>
+    <td><b>CASH FLOW</b></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Cash Flow</font>
+    </td>
+    <td><INPUT TYPE=text NAME="rs1" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+    <td><INPUT TYPE=text NAME="rs2" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+    <td><INPUT TYPE=text NAME="rs3" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+    <td><INPUT TYPE=text NAME="rs4" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+    <td><INPUT TYPE=text NAME="rs5" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+  </tr>
+  <tr>
+    <td><STRONG>TAX DEDUCTION</STRONG>
+    </td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Interest Expense</td>
+    <td><INPUT TYPE=text NAME="ia1" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+    <td><INPUT TYPE=text NAME="ia2" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+    <td><INPUT TYPE=text NAME="ia3" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+    <td><INPUT TYPE=text NAME="ia4" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+    <td><INPUT TYPE=text NAME="ia5" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+  </tr>
+  <tr>
+    <td>+ Depreciation*</td>
+    <td><INPUT TYPE=text NAME="d1" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+    <td><INPUT TYPE=text NAME="d2" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+    <td><INPUT TYPE=text NAME="d3" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+    <td><INPUT TYPE=text NAME="d4" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+    <td><INPUT TYPE=text NAME="d5" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+  </tr>
+  <tr>
+    <td>+ Ins, Tax, other expenses</td>
+    <td>
+      
+      <INPUT TYPE=text NAME="totexp1" VALUE=0 SIZE=7 onChange=computeField(this)></font></td>
+    <td>
+      
+      <INPUT TYPE=text NAME="totexp2" VALUE=0 SIZE=7 onChange=computeField(this)></font></td>
+    <td>
+      
+      <INPUT TYPE=text NAME="totexp3" VALUE=0 SIZE=7 onChange=computeField(this)></font></td>
+    <td>
+      
+      <INPUT TYPE=text NAME="totexp4" VALUE=0 SIZE=7 onChange=computeField(this)></font></td>
+    <td>
+      
+      <INPUT TYPE=text NAME="totexp5" VALUE=0 SIZE=7 onChange=computeField(this)></font></td>
+  </tr>
+  <tr>
+    
+    <td>- Rental Income
+    </td>
+    <td><INPUT TYPE=text NAME="ri21" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+    <td><INPUT TYPE=text NAME="ri22" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+    <td><INPUT TYPE=text NAME="ri23" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+    <td><INPUT TYPE=text NAME="ri24" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+    <td><INPUT TYPE=text NAME="ri25" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td></font>
+  </tr>
+  <tr>
+    <td><STRONG>Total Tax Deduction</STRONG>
+    </td>
+    <td><INPUT TYPE=text NAME="tc1" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+    <td><INPUT TYPE=text NAME="tc2" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+    <td><INPUT TYPE=text NAME="tc3" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+    <td><INPUT TYPE=text NAME="tc4" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+    <td><INPUT TYPE=text NAME="tc5" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+  </tr>
+  <tr>
+    <td><STRONG>TAX SAVED</STRONG>**</td>
+    <td><INPUT TYPE=text NAME="tax1" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+    <td><INPUT TYPE=text NAME="tax2" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+    <td><INPUT TYPE=text NAME="tax3" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+    <td><INPUT TYPE=text NAME="tax4" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+    <td><INPUT TYPE=text NAME="tax5" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td><b>NET WORTH</b></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td><strong>After Tax Cash Flow</strong></td>
+    <td><INPUT TYPE=text NAME="at1" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+    <td><INPUT TYPE=text NAME="at2" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+    <td><INPUT TYPE=text NAME="at3" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+    <td><INPUT TYPE=text NAME="at4" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+    <td><INPUT TYPE=text NAME="at5" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+  </tr>
+  <tr>
+    <td>Principal Paid (est)</td>
+    <td>
+      <INPUT TYPE=text NAME="prin1" VALUE=0 SIZE=7 onChange=computeField(this)></td>
+    <td>
+      <INPUT TYPE=text NAME="prin2" VALUE=0 SIZE=7 onChange=computeField(this)></td>
+    <td>
+      <INPUT TYPE=text NAME="prin3" VALUE=0 SIZE=7 onChange=computeField(this)></td>
+    <td>
+      <INPUT TYPE=text NAME="prin4" VALUE=0 SIZE=7 onChange=computeField(this)></td>
+    <td>
+      <INPUT TYPE=text NAME="prin5" VALUE=0 SIZE=7 onChange=computeField(this)></td>
+  </tr>
+  <tr>
+    <td>Property Value</td>
+    <td><INPUT TYPE=text NAME="cg1" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+    <td><INPUT TYPE=text NAME="cg2" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+    <td><INPUT TYPE=text NAME="cg3" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+    <td><INPUT TYPE=text NAME="cg4" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+    <td><INPUT TYPE=text NAME="cg5" VALUE=0 SIZE=7 onChange=computeField(this)>
+    </td>
+  </tr>
+  <tr class="Calc_Results">
+    <td><strong>Yearly addition to<br>
+    Net Worth</strong></td>
+    <td>
+      <INPUT TYPE=text NAME="nw1" VALUE=0 SIZE=7 onChange=computeField(this)></td>
+    <td>
+      <INPUT TYPE=text NAME="nw2" VALUE=0 SIZE=7 onChange=computeField(this)></td>
+    <td>
+      <INPUT TYPE=text NAME="nw3" VALUE=0 SIZE=7 onChange=computeField(this)></td>
+    <td>
+      <INPUT TYPE=text NAME="nw4" VALUE=0 SIZE=7 onChange=computeField(this)></td>
+    <td>
+      <INPUT TYPE=text NAME="nw5" VALUE=0 SIZE=7 onChange=computeField(this)></td>
+  </tr>
+  <tr>
+    <td bgcolor="#008000">&nbsp;</td>
+    <td bgcolor="#008000">&nbsp;</td>
+    <td bgcolor="#008000">&nbsp;</td>
+    <td bgcolor="#008000">&nbsp;</td>
+    <td bgcolor="#008000">&nbsp;</td>
+    <td bgcolor="#008000">&nbsp;</td>
+  </tr>
+</table>
+          
+          </td>
+      </tr>
+    </table>
+  </div>
+  <div align="right">
+    <table border="0" cellspacing="1" width="100%">
+      <tr>
+        <td width="69%">
+  <strong>Assumptions:&nbsp;</strong> <br>
+  * 27.5 yr straight line depreciation, deduction may be limited with high gross 
+  income.&nbsp; Depreciation is based on the value of the home without the 
+  land.&nbsp;&nbsp; In this calculation we are allocating 10% of the purchase price to the 
+  land and the remainder to the residence.<br>
+  ** 2001 Federal Filing Status Single&nbsp; (most conservative tax rate)&nbsp; 
+  Keep in mind that your tax deduction may also be limited with an adjusted 
+  gross income over $100,000.&nbsp; See your tax advisor for details.</td>
+        <td width="31%"><a href="javascript:printThis()">
+       
+      </tr>
+    </table>
+  </div>
+  </form>
+
+
+
+ 
+</div> <!-- up content div --->
+
+
+
+</div>
+</div>
+</div>
+<div style="clear:both; height:1px; display:block;"></div>
+
+<!-- end of content area div -->
+</div>
+<!-- footer area begins here. -->
+
+
+<div style="clear:both; height:1px; display:block;"></div>
+</div>
+</body>
+</html>
