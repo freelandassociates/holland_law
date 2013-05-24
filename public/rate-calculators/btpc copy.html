@@ -1,0 +1,955 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Capital Title Corinth - Law firm of John Holland - "Calculators"</title>
+<style type="text/css">
+<!--
+a:link {color: #888469;}
+a:visited {color: #c9c39e;}
+a:active {color: #c9c39e;}
+a:hover {color: #c03325;}
+a {text-decoration: none;}
+-->
+</style>
+<script language="JavaScript"><!-- hide script
+//-- JavaScript code
+//-- Do the calculation based on three passed values.
+function calc(val,factor,putin) { 
+   //--If null passed, convert to zero.
+   if (val == "") {
+      val = "0"
+   }
+   //--Evaluate expression and display in appropriate table cell.
+   evalstr = "document.ConverTable."+putin+ ".value = "
+   evalstr = evalstr + val + "*" + factor
+   eval(evalstr)
+}
+// unhide script --></script>
+
+
+<style type="text/css">
+body {
+  /*background-color: #000000;*/
+  background-image:url(images/background.jpg);
+  background-position:top right;
+  background-repeat:no-repeat;
+}
+
+table.calc {
+  /*background-color:#fff7c6;*/
+  /*padding:10px;*/
+  width:100%;
+  height:100%;
+  
+}
+
+table.content {
+  /*background-color:#fff7c6;*/
+  /*padding:10px;*/
+  width:100%;
+  height:100%;
+  
+}
+
+table.calchead {
+  width:600px;
+  height:25;
+}
+table.calcfoot {
+  width:600px;
+  height:45;
+}
+</style>
+</head>
+
+<body>
+<table class="content">
+        <tr> 
+          <td><b><div align="justify"><u>Basic Rate Calculator</u></b><br /><br />
+              <p>The following Title Insurance Premium Rates are 
+              based on the sale price of the property and are set by the Department 
+              of Insurance for the State of Texas. Additional premium costs may 
+              be charged in conjunction with a lender transaction.</p>
+        
+              <p>Please 
+              be sure to enter an amount of at least 10000.  This is the minimum amount for which the State of Texas will issue a policy.</p></div>
+              </td>
+              </tr>
+              </table>
+        <SCRIPT language=JavaScript>
+
+
+function calculateRate(){
+  var insurancevalue;
+  var loan_Policy = "";
+
+  insurancevalue = document.rateform.insurance.value;
+  loan_Policy = basic_premium(insurancevalue);
+ 
+    document.rateform.Loan_Policy.value = "$" + loan_Policy;
+
+}
+     
+function basic_premium(value){
+  var premium;
+  var overmin;
+
+
+
+
+
+ if( (value > 0) & (value <= 9999))
+      { premium = alert("The state of Texas does not issue policies less than 10000");
+      window.location.href = "btpc.html";
+    }
+    
+
+
+if( (value > 0) & (value <= 9999))
+      { premium = 0;
+    }  
+    
+    
+  function  validateNumeric( strValue ) {
+  var objRegExp  =  /^[0-9]*$/;
+
+  //check for numeric characters
+  return objRegExp.test(strValue);
+}
+
+if( !validateNumeric(value))
+      { premium = alert("Please enter the value in whole dollar ammount without commas or decimals");
+      window.location.href = "btpc.html";
+    }   
+    
+ if( !validateNumeric(value))
+      { premium = 0;
+    }   
+
+
+       
+    
+    
+
+    
+    
+    
+    
+    
+     
+   else if ( (value >= 10000) & (value <= 10000) )
+       {  overmin = ((229)); 
+       premium = (overmin);
+    }
+  else if ( (value >= 10001) & (value <= 10500) )
+       {  overmin = ((233)); 
+       premium = (overmin);
+    }
+    
+    else if ( (value >= 10501) & (value <= 11000) )
+       {  overmin = ((235)); 
+       premium = (overmin);
+    }
+  else if ( (value >= 11001) & (value <= 11500) )
+       {  overmin = ((239)); 
+       premium = (overmin);
+    }
+  else if ( (value >= 11501) & (value <= 12000) )
+       {  overmin = ((243)); 
+       premium = (overmin);
+    }
+  else if ( (value >= 12001) & (value <= 12500) )
+       {  overmin = ((246)); 
+       premium = (overmin);
+    }
+  else if ( (value >= 12501) & (value <= 13000) )
+       {  overmin = ((250)); 
+       premium = (overmin);
+    }
+  else if ( (value >= 13001) & (value <= 13500) )
+       {  overmin = ((254)); 
+       premium = (overmin);
+    }
+  else if ( (value >= 13501) & (value <= 14000) )
+       {  overmin = ((257)); 
+       premium = (overmin);
+    }
+  else if ( (value >= 14001) & (value <= 14500) )
+       {  overmin = ((260)); 
+       premium = (overmin);
+    }
+  else if ( (value >= 14501) & (value <= 15000) )
+       {  overmin = ((262)); 
+       premium = (overmin);
+    }
+  else if ( (value >= 15001) & (value <= 15500) )
+       {  overmin = ((266)); 
+       premium = (overmin);
+    }
+  else if ( (value >= 15501) & (value <= 16000) )
+       {  overmin = ((270)); 
+       premium = (overmin);
+    }
+  else if ( (value >= 16001) & (value <= 16500) )
+       {  overmin = ((274)); 
+       premium = (overmin);
+    }
+  else if ( (value >= 16501) & (value <= 17000) )
+       {  overmin = ((277)); 
+       premium = (overmin);
+    }
+  else if ( (value >= 17001) & (value <= 17500) )
+       {  overmin = ((281)); 
+       premium = (overmin);
+    }
+  else if ( (value >= 17501) & (value <= 18000) )
+       {  overmin = ((285)); 
+       premium = (overmin);
+    }
+  else if ( (value >= 18001) & (value <= 18500) )
+       {  overmin = ((287)); 
+       premium = (overmin);
+    }
+  else if ( (value >= 18501) & (value <= 19000) )
+       {  overmin = ((290)); 
+       premium = (overmin);
+    }
+  else if ( (value >= 19001) & (value <= 19500) )
+       {  overmin = ((293)); 
+       premium = (overmin);
+    }
+  else if ( (value >= 19501) & (value <= 20000) )
+       {  overmin = ((298)); 
+       premium = (overmin);
+    }
+  else if ( (value >= 20001) & (value <= 20500) )
+       {  overmin = ((301)); 
+       premium = (overmin);
+    }
+  else if ( (value >= 20501) & (value <= 21000) )
+       {  overmin = ((305)); 
+       premium = (overmin);
+    }
+  else if ( (value >= 21001) & (value <= 21500) )
+       {  overmin = ((308)); 
+       premium = (overmin);
+    }
+  else if ( (value >= 21501) & (value <= 22000) )
+       {  overmin = ((312)); 
+       premium = (overmin);
+    }
+  else if ( (value >= 22001) & (value <= 22500) )
+       {  overmin = ((315)); 
+       premium = (overmin);
+    }
+  else if ( (value >= 22501) & (value <= 23000) )
+       {  overmin = ((318)); 
+       premium = (overmin);
+    }
+  else if ( (value >= 23001) & (value <= 23500) )
+       {  overmin = ((321)); 
+       premium = (overmin);
+    }
+  else if ( (value >= 23501) & (value <= 24000) )
+       {  overmin = ((325)); 
+       premium = (overmin);
+    }
+  else if ( (value >= 24001) & (value <= 24500) )
+       {  overmin = ((328)); 
+       premium = (overmin);
+    }
+  else if ( (value >= 24501) & (value <= 25000) )    
+       {  overmin = ((332)); 
+       premium = (overmin);
+    }
+  else if ( (value >= 25001) & (value <= 25500) )
+       {  overmin = ((335)); 
+       premium = (overmin);
+    }
+  else if ( (value >= 25501) & (value <= 26000) )
+       {  overmin = ((339)); 
+       premium = (overmin);
+    }
+  else if ( (value >= 26001) & (value <= 26500) )
+       {  overmin = ((342)); 
+       premium = (overmin);
+    }
+  else if ( (value >= 26501) & (value <= 27000) )
+       {  overmin = ((345)); 
+       premium = (overmin);
+    }
+  else if ( (value >= 27001) & (value <= 27500) )
+       {  overmin = ((348)); 
+       premium = (overmin);
+    }
+  else if ( (value >= 27501) & (value <= 28000) )
+       {  overmin = ((352)); 
+       premium = (overmin);
+    }
+  else if ( (value >= 28001) & (value <= 28500) )
+       {  overmin = ((355)); 
+       premium = (overmin);
+    }
+  else if ( (value >= 28501) & (value <= 29000) )
+       {  overmin = ((359)); 
+       premium = (overmin);
+    }
+  else if ( (value >= 29001) & (value <= 29500) )
+       {  overmin = ((362)); 
+       premium = (overmin);
+    }
+  else if ( (value >= 29501) & (value <= 30000) )
+       {  overmin = ((366)); 
+       premium = (overmin);
+    }
+  else if ( (value >= 30001) & (value <= 30500) )
+       {  overmin = ((369)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 30501) & (value <= 31000) )
+       {  overmin = ((373)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 31001) & (value <= 31500) )
+       {  overmin = ((376)); 
+       premium = (overmin);
+    } 
+    else if ( (value >= 31501) & (value <= 32000) )
+       {  overmin = ((379)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 32001) & (value <= 32500) )
+       {  overmin = ((383)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 32501) & (value <= 33000) )
+       {  overmin = ((386)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 33001) & (value <= 33500) )
+       {  overmin = ((390)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 33501) & (value <= 34000) )
+       {  overmin = ((393)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 34001) & (value <= 34500) )
+       {  overmin = ((397)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 34501) & (value <= 35000) )
+       {  overmin = ((400)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 35001) & (value <= 35500) )
+       {  overmin = ((404)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 35501) & (value <= 36000) )
+       {  overmin = ((407)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 36001) & (value <= 36500) )
+       {  overmin = ((410)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 36501) & (value <= 37000) )
+       {  overmin = ((413)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 37001) & (value <= 37500) )
+       {  overmin = ((417)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 37501) & (value <= 38000) )
+       {  overmin = ((421)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 38001) & (value <= 38500) )
+       {  overmin = ((425)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 38501) & (value <= 39000) )
+       {  overmin = ((427)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 39001) & (value <= 39500) )
+       {  overmin = ((431)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 39501) & (value <= 40000) )
+       {  overmin = ((434)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 40001) & (value <= 40500) )
+       {  overmin = ((438)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 40501) & (value <= 41000) )
+       {  overmin = ((440)); 
+       premium = (overmin);
+    }
+  else if ( (value >= 41001) & (value <= 41500) )
+       {  overmin = ((445)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 41501) & (value <= 42000) )
+       {  overmin = ((448)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 42001) & (value <= 42500) )
+       {  overmin = ((452)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 42501) & (value <= 43000) )
+       {  overmin = ((454)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 43001) & (value <= 43500) )
+       {  overmin = ((458)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 43501) & (value <= 44000) )
+       {  overmin = ((461)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 44001) & (value <= 44500) )
+       {  overmin = ((465)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 44501) & (value <= 45000) )
+       {  overmin = ((469)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 45001) & (value <= 45500) )
+       {  overmin = ((472)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 45501) & (value <= 46000) )
+       {  overmin = ((475)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 46001) & (value <= 46500) )
+       {  overmin = ((479)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 46501) & (value <= 47000) )
+       {  overmin = ((481)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 47001) & (value <= 47500) )
+       {  overmin = ((485)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 47501) & (value <= 48000) )
+       {  overmin = ((489)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 48001) & (value <= 48500) )
+       {  overmin = ((493)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 48501) & (value <= 49000) )
+       {  overmin = ((496)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 49001) & (value <= 49500) )
+       {  overmin = ((499)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 49501) & (value <= 50000) )
+       {  overmin = ((503)); 
+       premium = (overmin);
+    }
+     else if ( (value >= 50001) & (value <= 50500) )
+       {  overmin = ((506)); 
+       premium = (overmin);
+    }
+     else if ( (value >= 50501) & (value <= 51000) )
+       {  overmin = ((508)); 
+       premium = (overmin);
+    }
+     else if ( (value >= 51001) & (value <= 51500) )
+       {  overmin = ((512)); 
+       premium = (overmin);
+    }
+     else if ( (value >= 51501) & (value <= 52000) )
+       {  overmin = ((516)); 
+       premium = (overmin);
+    }
+     else if ( (value >= 52001) & (value <= 52500) )
+       {  overmin = ((520)); 
+       premium = (overmin);
+    }
+     else if ( (value >= 52501) & (value <= 53000) )
+       {  overmin = ((523)); 
+       premium = (overmin);
+    }
+     else if ( (value >= 53001) & (value <= 53500) )
+       {  overmin = ((527)); 
+       premium = (overmin);
+    }
+     else if ( (value >= 53501) & (value <= 54000) )
+       {  overmin = ((530)); 
+       premium = (overmin);
+    }
+     else if ( (value >= 54001) & (value <= 54500) )
+       {  overmin = ((533)); 
+       premium = (overmin);
+    }
+     else if ( (value >= 54501) & (value <= 55000) )
+       {  overmin = ((536)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 55001) & (value <= 55500) )
+       {  overmin = ((539)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 55501) & (value <= 56000) )
+       {  overmin = ((544)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 56001) & (value <= 56500) )
+       {  overmin = ((547)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 56501) & (value <= 57000) )
+       {  overmin = ((550)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 57001) & (value <= 57500) )
+       {  overmin = ((554)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 57501) & (value <= 58000) )
+       {  overmin = ((558)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 58001) & (value <= 58500) )
+       {  overmin = ((560)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 58501) & (value <= 59000) )
+       {  overmin = ((564)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 59001) & (value <= 59500) )
+       {  overmin = ((567)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 59501) & (value <= 60000) )
+       {  overmin = ((571)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 60001) & (value <= 60500) )
+       {  overmin = ((575)); 
+       premium = (overmin);
+    }
+     else if ( (value >= 60501) & (value <= 61000) )
+       {  overmin = ((578)); 
+       premium = (overmin);
+    }
+     else if ( (value >= 61001) & (value <= 61500) )
+       {  overmin = ((581)); 
+       premium = (overmin);
+    }
+     else if ( (value >= 61501) & (value <= 62000) )
+       {  overmin = ((585)); 
+       premium = (overmin);
+    }
+     else if ( (value >= 62001) & (value <= 62500) )
+       {  overmin = ((589)); 
+       premium = (overmin);
+    }
+     else if ( (value >= 62501) & (value <= 63000) )
+       {  overmin = ((591)); 
+       premium = (overmin);
+    }
+     else if ( (value >= 63001) & (value <= 63500) )
+       {  overmin = ((594)); 
+       premium = (overmin);
+    }
+     else if ( (value >= 63501) & (value <= 64000) )
+       {  overmin = ((598)); 
+       premium = (overmin);
+    }
+     else if ( (value >= 64001) & (value <= 64500) )
+       {  overmin = ((602)); 
+       premium = (overmin);
+    }
+     else if ( (value >= 64501) & (value <= 65000) )
+       {  overmin = ((605)); 
+       premium = (overmin);
+    }
+     else if ( (value >= 65001) & (value <= 65500) )
+       {  overmin = ((608)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 65501) & (value <= 66000) )
+       {  overmin = ((612)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 66001) & (value <= 66500) )
+       {  overmin = ((617)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 66501) & (value <= 67000) )
+       {  overmin = ((620)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 67001) & (value <= 67500) )
+       {  overmin = ((621)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 67501) & (value <= 68000) )
+       {  overmin = ((625)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 68001) & (value <= 68500) )
+       {  overmin = ((629)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 68501) & (value <= 69000) )
+       {  overmin = ((632)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 69001) & (value <= 69500) )
+       {  overmin = ((635)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 69501) & (value <= 70000) )
+       {  overmin = ((640)); 
+       premium = (overmin);
+    }
+  else if ( (value >= 70001) & (value <= 70500) )
+       {  overmin = ((644)); 
+       premium = (overmin);
+    }
+     else if ( (value >= 70501) & (value <= 71000) )
+       {  overmin = ((647)); 
+       premium = (overmin);
+    }
+     else if ( (value >= 71001) & (value <= 71500) )
+       {  overmin = ((649)); 
+       premium = (overmin);
+    }
+     else if ( (value >= 71501) & (value <= 72000) )
+       {  overmin = ((652)); 
+       premium = (overmin);
+    }
+     else if ( (value >= 72001) & (value <= 72500) )
+       {  overmin = ((656)); 
+       premium = (overmin);
+    }
+     else if ( (value >= 72501) & (value <= 73000) )
+       {  overmin = ((660)); 
+       premium = (overmin);
+    }
+     else if ( (value >= 73001) & (value <= 73500) )
+       {  overmin = ((663)); 
+       premium = (overmin);
+    }
+     else if ( (value >= 73501) & (value <= 74000) )
+       {  overmin = ((667)); 
+       premium = (overmin);
+    }
+     else if ( (value >= 74001) & (value <= 74500) )
+       {  overmin = ((671)); 
+       premium = (overmin);
+    }
+     else if ( (value >= 74501) & (value <= 75000) )
+       {  overmin = ((674)); 
+       premium = (overmin);
+    }
+     else if ( (value >= 75001) & (value <= 75500) )
+       {  overmin = ((676)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 75501) & (value <= 76000) )
+       {  overmin = ((680)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 76001) & (value <= 76500) )
+       {  overmin = ((683)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 76501) & (value <= 77000) )
+       {  overmin = ((687)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 77001) & (value <= 77500) )
+       {  overmin = ((690)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 77501) & (value <= 78000) )
+       {  overmin = ((694)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 78001) & (value <= 78500) )
+       {  overmin = ((698)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 78501) & (value <= 79000) )
+       {  overmin = ((702)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 79001) & (value <= 79500) )
+       {  overmin = ((703)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 79501) & (value <= 80000) )
+       {  overmin = ((707)); 
+       premium = (overmin);
+    }
+  else if ( (value >= 80001) & (value <= 80500) )
+       {  overmin = ((711)); 
+       premium = (overmin);
+    }
+     else if ( (value >= 80501) & (value <= 81000) )
+       {  overmin = ((715)); 
+       premium = (overmin);
+    }
+     else if ( (value >= 81001) & (value <= 81500) )
+       {  overmin = ((717)); 
+       premium = (overmin);
+    }
+     else if ( (value >= 81501) & (value <= 82000) )
+       {  overmin = ((721)); 
+       premium = (overmin);
+    }
+     else if ( (value >= 82001) & (value <= 82500) )
+       {  overmin = ((725)); 
+       premium = (overmin);
+    }
+     else if ( (value >= 82501) & (value <= 83000) )
+       {  overmin = ((729)); 
+       premium = (overmin);
+    }
+     else if ( (value >= 83001) & (value <= 83500) )
+       {  overmin = ((731)); 
+       premium = (overmin);
+    }
+     else if ( (value >= 83501) & (value <= 84000) )
+       {  overmin = ((734)); 
+       premium = (overmin);
+    }
+     else if ( (value >= 84001) & (value <= 84500) )
+       {  overmin = ((739)); 
+       premium = (overmin);
+    }
+     else if ( (value >= 84501) & (value <= 85000) )
+       {  overmin = ((742)); 
+       premium = (overmin);
+    }
+     else if ( (value >= 85001) & (value <= 85500) )
+       {  overmin = ((745)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 85501) & (value <= 86000) )
+       {  overmin = ((748)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 86001) & (value <= 86500) )
+       {  overmin = ((752)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 86501) & (value <= 87000) )
+       {  overmin = ((756)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 87001) & (value <= 87500) )
+       {  overmin = ((759)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 87501) & (value <= 88000) )
+       {  overmin = ((762)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 88001) & (value <= 88500) )
+       {  overmin = ((766)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 88501) & (value <= 89000) )
+       {  overmin = ((770)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 89001) & (value <= 89500) )
+       {  overmin = ((772)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 89501) & (value <= 90000) )
+       {  overmin = ((775)); 
+       premium = (overmin);
+    }
+   else if ( (value >= 90001) & (value <= 90500) )
+       {  overmin = ((779)); 
+       premium = (overmin);
+    }
+     else if ( (value >= 90501) & (value <= 91000) )
+       {  overmin = ((783)); 
+       premium = (overmin);
+    }
+     else if ( (value >= 91001) & (value <= 91500) )
+       {  overmin = ((787)); 
+       premium = (overmin);
+    }
+     else if ( (value >= 91501) & (value <= 92000) )
+       {  overmin = ((789)); 
+       premium = (overmin);
+    }
+     else if ( (value >= 92001) & (value <= 92500) )
+       {  overmin = ((793)); 
+       premium = (overmin);
+    }
+     else if ( (value >= 92501) & (value <= 93000) )
+       {  overmin = ((797)); 
+       premium = (overmin);
+    }
+     else if ( (value >= 93001) & (value <= 93500) )
+       {  overmin = ((801)); 
+       premium = (overmin);
+    }
+     else if ( (value >= 93501) & (value <= 94000) )
+       {  overmin = ((802)); 
+       premium = (overmin);
+    }
+     else if ( (value >= 94001) & (value <= 94500) )
+       {  overmin = ((806)); 
+       premium = (overmin);
+    }
+     else if ( (value >= 94501) & (value <= 95000) )
+       {  overmin = ((811)); 
+       premium = (overmin);
+    }
+     else if ( (value >= 95001) & (value <= 95500) )
+       {  overmin = ((814)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 95501) & (value <= 96000) )
+       {  overmin = ((816)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 96001) & (value <= 96500) )
+       {  overmin = ((820)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 96501) & (value <= 97000) )
+       {  overmin = ((824)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 97001) & (value <= 97500) )
+       {  overmin = ((828)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 97501) & (value <= 98000) )
+       {  overmin = ((830)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 98001) & (value <= 98500) )
+       {  overmin = ((834)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 98501) & (value <= 99000) )
+       {  overmin = ((838)); 
+       premium = (overmin);
+    }
+    else if ( (value >= 99001) & (value <= 99500) )
+       {  overmin = ((841)); 
+       premium = (overmin);
+    }
+  else if ( (value >= 99501) & (value <= 100000) )
+       {  overmin = ((843)); 
+       premium = (overmin);
+    }
+    
+
+
+
+
+
+
+
+
+    
+  else if ( (value >= 100001) & (value <= 1000000) )
+    {  overmin = ((value-100000)); 
+       premium = (overmin*.00534)+843;
+    }
+  else if ( (value >= 1000001) & (value <= 5000000) )
+    {  overmin = ((value-1000000)); 
+       premium = (overmin*.00439)+5649;
+    }
+  else if ( (value >= 5000001) & (value <= 15000000) )
+    {  overmin = ((value-5000000)); 
+       premium = (overmin*.00362)+23209;
+    }
+  else if ( (value >= 15000001) & (value <= 25000000) )
+    {  overmin = ((value-15000000)); 
+       premium = (overmin*.00257)+59409;
+    }
+  else if ( (value > 25000000) )
+    {  overmin = ((value-25000000)); 
+
+       premium = (overmin*.00154)+85109;
+    }
+ 
+   else 
+       premium = 0;
+   
+    var temp1 =  Math.round(premium);
+    
+    var s1 = temp1.toString();
+    var decimalExists = s1.indexOf('.')
+     
+    if(decimalExists == -1)
+        s1 = s1+".00";
+        
+    else
+  {  
+    if( (s1.length - decimalExists) == 2) 
+      s1 = s1+"00";
+      
+{
+  
+  }
+  
+}
+    return s1
+}
+      </SCRIPT>
+ <FORM name="rateform">
+              <table class="calc">
+              <TR> 
+                <TD colspan="4"><div align="right"><b><font size=4 face="Verdana" color="#7f7b63"> 
+                    Enter Policy Amount</font></b></div>
+                    </TD>
+                <TD><INPUT name=insurance size="35" style="background-color: #FFFFFF; border: 1px inset #C0C0C0; font-size:11px">
+                </TD>
+                </TR>
+              <tr> 
+                <TD colspan="4"><div align="right">Do 
+                    not enter any currency symbols or commas<br></div>
+                    </TD
+              </tr>
+              <tr> 
+                <TD colspan="4"><font color="#006600" size="2" face="Verdana"> 
+                  <div align="right"><INPUT onclick=calculateRate(); type=button value="Calculate Basic Premium:" name=calculate_rate style="border:1px solid #7f7b63; font-family: Arial; font-size: 8pt; font-weight:bold"></font></div><br /><br /></TD>
+              </tr>
+              <tr> 
+                <TD><b><font size=4 face="Verdana" color="#7f7b63"><div align="center">Basic 
+                    Premium</font></b></div></TD>
+                    </tr>
+                    <tr>
+                <TD><div align="right"><INPUT size=35 value=0 name=Loan_Policy style="border: 1px inset #C0C0C0; font-size:11px"></div>
+                </TD>
+              </tr>
+              <tr>
+                <TD><i><div align="center">Rate calculations are base on information 
+                    obtained from the Texas Department of Insurance.<br>
+                    These rates are effective as of February 1, 2007 and are subject 
+                    to change each year.</i></div></TD>
+              </tr>
+            </table></FORM>
+</body>
+</html>
