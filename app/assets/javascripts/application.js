@@ -45,7 +45,7 @@ $(document).ready(function () {
 	var lastChar = window.location.href.substr(window.location.href.length - 1);
 	// alert(lastChar);
 	if (lastChar == '/') {
-		$.prettyPhoto.open('https://www.youtube.com/watch?v=GZotUexhlBU&amp;rel=0','Holland Law and Title - A Fresh Approach','Holland Law and Title - A Fresh Approach');
+		// $.prettyPhoto.open('https://www.youtube.com/watch?v=GZotUexhlBU&amp;rel=0','Holland Law and Title - A Fresh Approach','Holland Law and Title - A Fresh Approach');
 	}
 
 });

@@ -23,10 +23,33 @@
 
 }
 
-/*.firstHeading {
-	margin: 0px;
-	padding: 0px;
-}*/
+.videocarousel {
+	/*border: 1px solid red;*/
+	height: 128px;
+	width: 160px;
+}
+
+.videocaption {
+	/*border: 1px solid black;*/
+	font-size: 11px;
+	width: 155px;
+	height: 8px;
+	margin-left: 3px;
+	text-align: center;
+	float: left;
+	display: inline-block;
+}
+
+.videocaption:hover {
+	color: grey;
+}
+
+.videothumbnail {
+	display: inline-block;
+	float: left;
+	width: 140px;
+	height: 100px;
+}
 
 #railscontent {
 	/*background-color: #DFEBCC;*/
