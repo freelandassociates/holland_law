@@ -3,7 +3,7 @@
     <style>
       #map_canvas {
         width: 500px;
-        height: 400px;
+        height: 290px;
       }
     </style>
     <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
@@ -15,11 +15,36 @@
       function initialize() {
         var map_canvas = document.getElementById('map_canvas');
         var map_options = {
-          center: new google.maps.LatLng(44.5403, -78.5463),
-          zoom: 8,
+          center: new google.maps.LatLng(33.130561,-97.043892),
+          zoom: 14,
           mapTypeId: google.maps.MapTypeId.ROADMAP
         }
+
         var map = new google.maps.Map(map_canvas, map_options)
+
+        var marker = new google.maps.Marker({
+          position: new google.maps.LatLng(33.131361,-97.044302),
+          map: map,
+          title:"Holland Law and Title"
+        })
+
+        var contentString = '<div id="content">'+
+          '<h3 id="firstHeading" class="firstHeading" style="font-family:arial; margin:0px;">Holland Law and Title</h3>'+
+          '<p style="font-family:arial; font-size:13px;">4251 FM 2181 (Swisher Road)'+
+          ' Suite 200'+ 
+          '<br/>Corinth'+
+          '<br/>Texas'+
+          '<br/>76210'+
+          '<br/><a href="http://maps.google.com/maps?daddr=33.131428,-97.044206&hl=en&sll=33.131428,-97.044206&sspn=0.010889,0.019205&geocode=FaSL-QEdEjk3-g&gl=us&mra=ls&t=m&z=16" target="_blank">Directions</a>'+
+          '</div>';
+
+          var infowindow = new google.maps.InfoWindow({
+              content: contentString
+          });
+
+          google.maps.event.addListener(marker, 'click', function() {
+            infowindow.open(map,marker);
+          });
       }
       // google.maps.event.addDomListener(window, ‘load’, initialize);
       // $(document).ready(function() {

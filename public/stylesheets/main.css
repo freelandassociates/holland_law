@@ -23,6 +23,11 @@
 
 }
 
+/*.firstHeading {
+	margin: 0px;
+	padding: 0px;
+}*/
+
 #railscontent {
 	/*background-color: #DFEBCC;*/
 	background-color: #E4EFD5;
@@ -30,7 +35,7 @@
 	padding-left: 15px;
 	padding-right: 15px;
 	height: 418px;
-	opacity: 0.8;
+	opacity: 0.9;
 	color: #433b36;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
