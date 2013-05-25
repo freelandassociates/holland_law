@@ -58,41 +58,10 @@ Fax: 940 312 7346<br />
         </div>
         
         <%= render "/refinery/side_menu" %>
-        
-        <div class="cms-content">
-            <div id="railscontent">
-                <%= render_content_page(@page, {
-                      :hide_sections => local_assigns[:hide_sections],
-                      :can_use_fallback => !local_assigns[:show_empty_sections] && !local_assigns[:remove_automatic_sections]
-                    }) %>
 
-            </div>
-    </div>
-            
-<!--         <div class="container bottom-margin">
-        <div class="col c25">
-        <h3> We are different</h3>
-        <p> Modern and innovative, Holland Law and Title breaks the mould. We are down to earth, competitively priced, and have deep specialist knowledge.&nbsp;<br />
-        <a href="/we-are-different">Learn More</a></p>
-        </div>
-        <div class="col c25 right last">
-        <h3> Our expertise</h3>
-        <p> Specialists in our field, your title matters will be expertly handled. We'll give you practical guidance in plain English.<br />
-        <a href="/our-expertise">Learn More</a></p>
-        </div>
-        </div> -->
-<!--         <div class="container bottom-margin">
-        <div class="col c25">
-        <h3> Who we are</h3>
-        <p> Holland Law and Title is an independent firm of highly qualified professionals. We're friendly, flexible and always on hand to help.<br />
-        <a href="/who-we-are">Learn More</a></p>
-        </div>
-        <div class="col c25 right last">
-        <h3> Our clients</h3>
-        <p> Don't just take our word for it. We empower our clients, so they can get on with running their businesses. Here's what some have said about us.<br />
-        <a href="/our-clients">Learn More</a></p>
-        </div>
-        </div> -->
+        <!-- Everything else on this page is common to home.html.erb and show.html.erb  -->
+        <%= render "/refinery/pages/show_partial" %>
+
         </div>
         <div class="hr-v">
         <hr />
