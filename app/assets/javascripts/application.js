@@ -42,10 +42,15 @@ $(document).ready(function () {
 	});
 
 	// if lastChar is a / this is the homepage of the site..
-	var lastChar = window.location.href.substr(window.location.href.length - 1);
-	// alert(lastChar);
-	if (lastChar == '/') {
-		// $.prettyPhoto.open('https://www.youtube.com/watch?v=GZotUexhlBU&amp;rel=0','Holland Law and Title - A Fresh Approach','Holland Law and Title - A Fresh Approach');
+	// var lastChar = window.location.href.substr(window.location.href.length - 1);
+	// // alert(lastChar);
+	// if (lastChar == '/') {
+	// $.prettyPhoto.open('https://www.youtube.com/watch?v=GZotUexhlBU&amp;rel=0','Holland Law and Title - A Fresh Approach','Holland Law and Title - A Fresh Approach');
+	// }
+	alert(window.location.href);
+
+	if (window.location.href == 'http://pelican.holland-law-and-title.c66.me' || window.location.href == 'http://www.hollandlawandtitle.com' || window.location.href == 'http://localhost:3000/') {
+		$.prettyPhoto.open('https://www.youtube.com/watch?v=GZotUexhlBU&amp;rel=0','Holland Law and Title - A Fresh Approach','Holland Law and Title - A Fresh Approach');
 	}
 
 });
