@@ -47,9 +47,9 @@ $(document).ready(function () {
 	// if (lastChar == '/') {
 	// $.prettyPhoto.open('https://www.youtube.com/watch?v=GZotUexhlBU&amp;rel=0','Holland Law and Title - A Fresh Approach','Holland Law and Title - A Fresh Approach');
 	// }
-	alert(window.location.href);
+	// alert(window.location.href);
 
-	if (window.location.href == 'http://pelican.holland-law-and-title.c66.me' || window.location.href == 'http://www.hollandlawandtitle.com' || window.location.href == 'http://localhost:3000/') {
+	if (window.location.href == 'http://pelican.holland-law-and-title.c66.me/' || window.location.href == 'http://www.hollandlawandtitle.com/' || window.location.href == 'http://localhost:3000/') {
 		$.prettyPhoto.open('https://www.youtube.com/watch?v=GZotUexhlBU&amp;rel=0','Holland Law and Title - A Fresh Approach','Holland Law and Title - A Fresh Approach');
 	}
 
