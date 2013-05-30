@@ -38,7 +38,7 @@ $(document).ready(function () {
 
 	$("#carousel_items").carouFredSel({
 		scroll: 1,
-		items: 4
+		items: 3
 	});
 
 	// if lastChar is a / this is the homepage of the site..

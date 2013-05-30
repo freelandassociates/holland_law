@@ -58,6 +58,7 @@
 	padding-left: 15px;
 	padding-right: 15px;
 	height: 418px;
+	width: 675px;
 	opacity: 0.9;
 	color: #433b36;
 	-moz-border-radius: 5px;
@@ -111,11 +112,10 @@ body {
 	background:#639046;
 }
 body.home {
-	/*background:#639046 url(/images/home-bg.jpg) top center no-repeat;*/
-	/*background:#639046 url(/images/nice-tree.jpeg) top center no-repeat;*/
 	background:#93BF39 url(/images/hummingbird.jpg) top center no-repeat;
 	/*background-size: contain;*/
-	background-size: 1280px 800px;
+	/*background-size: 1280px 800px;*/
+	background-size: 1024px 678px;
 }
 /* - */
 
@@ -204,7 +204,7 @@ h1.super-duper-huge {
 	font-size:9.25em;
 }
 h1.large {
-	font-size:5em;
+	font-size:4.5em;
 	text-align:center;
 	width:100%;
 	text-transform:uppercase;
@@ -299,7 +299,7 @@ h3.archive {
 	width:180px;
 }
 .col.c25 {
-	width:380px;
+	width:360px;
 	height: 270px;
 	color: #433b36;
 }
@@ -641,14 +641,15 @@ table .width25 {
 }
 .inner-wrapper {
 	/*width:940px;*/
-	width:1140px;
+	/*width:1140px;*/
+	width:990px;
 	margin:0 auto;
 	overflow:visible;
 }
 
 #body_content_title {
 	color: #efffa7;
-	font-size: 2.5em;
+	font-size: 2em;
 }
 /* - */
 
@@ -747,7 +748,7 @@ table .width25 {
 
 #bar ul li ul li.first a, #bar ul li ul li.last a, #bar ul li ul li a {
 	color:#6d8b1b;
-	padding:5px 5px 5px 20px;
+	padding:5px 5px 5px 10px;
 	margin:0;
 	text-align:left;
 	line-height:18px;
@@ -763,9 +764,9 @@ table .width25 {
 
 #bar ul li ul li a.menu_second_level {
 	/*color: red;*/
-	font-size: 15px;
+	font-size: 13px;
 	line-height: 16px;
-	padding-left: 40px;
+	padding-left: 20px;
 	padding-top: 0px;
 	padding-bottom: 4px;
 }
@@ -791,6 +792,8 @@ table .width25 {
 
 #megamenu3 {
 	/*border: solid 1px white;*/
+	position: relative;
+	left: -148px;
 	height: 470px;
 	width: 750px;
 	background-color: #DDE6D7;
@@ -814,58 +817,58 @@ table .width25 {
 #megamenu4 {
 	/*border: solid 1px white;*/
 	position: relative;
-	left: -598px;
-	height: 580px;
-	width: 1220px;
+	left: -548px;
+	height: 550px;
+	width: 990px;
 	background-color: #DDE6D7;
 }
 
 #megamenu41 {
 	/*border: solid 1px red;*/
-	width: 300px;
-	height: 305px;
+	width: 245px;
+	height: 295px;
 	float: left;
 	display: inline-block;
 }
 #megamenu42 {
 	/*border: solid 1px red;*/
-	width: 300px;
-	height: 305px;
+	width: 245px;
+	height: 295px;
 	float: left;
 	display: inline-block;
 }
 #megamenu43 {
 	/*border: solid 1px red;*/
-	width: 300px;
-	height: 305px;
+	width: 245px;
+	height: 295px;
 	float: left;
 	display: inline-block;
 }
 #megamenu44 {
 	/*border: solid 1px red;*/
-	width: 300px;
-	height: 305px;
+	width: 245px;
+	height: 295px;
 	float: left;
 	display: inline-block;
 }
 #megamenu45 {
 	/*border: solid 1px red;*/
-	width: 300px;
-	height: 265px;
+	width: 245px;
+	height: 245px;
 	float: left;
 	display: inline-block;
 }
 #megamenu46 {
 	/*border: solid 1px red;*/
-	width: 300px;
-	height: 265px;
+	width: 245px;
+	height: 245px;
 	float: left;
 	display: inline-block;
 }
 #megamenu47 {
 	/*border: solid 1px red;*/
-	width: 300px;
-	height: 265px;
+	width: 245px;
+	height: 245px;
 	float: left;
 	display: inline-block;
 }
@@ -919,8 +922,8 @@ table .width25 {
 }
 #header .right p {
 	padding:0;
-	margin:35px 0 0 0;
-	font-size:1.2em;
+	margin: 5px 0 0 0;
+	font-size:1em;
 	font-weight:bold;
 	line-height:1.2em;
 }
@@ -954,17 +957,18 @@ table .width25 {
 }
 
 .cms-content {
-	width: 820px;
+	/*width: 820px;*/
 	float: left;
 	/*border: 1px solid black;*/
-	padding-left: 35px;
+	padding-left: 15px;
 }
 
 .cms-content-home {
-	width: 820px;
+	width: 650px;
 	float: left;
 	/*border: 1px solid black;*/
 	padding-left: 20px;
+	font-size: 15px;
 }
 
 .system-message, .system-error-message {
@@ -1150,7 +1154,7 @@ ul.footer-nav li a:hover {
 	width:100%;
 	float:left;
 	overflow:visible;
-	padding:15px 0px;
+	padding:5px 0px;
 }
 #main a {
 	color: #433b36;
