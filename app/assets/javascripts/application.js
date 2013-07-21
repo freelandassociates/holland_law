@@ -53,6 +53,10 @@ $(document).ready(function () {
 		$.prettyPhoto.open('https://www.youtube.com/watch?v=GZotUexhlBU&amp;rel=0','Holland Law and Title - A Fresh Approach','Holland Law and Title - A Fresh Approach');
 	}
 
+	if (window.location.href == 'http://pelican.holland-law-and-title.c66.me/videos/welcome' || window.location.href == 'http://www.hollandlawandtitle.com/videos/welcome' || window.location.href == 'http://localhost:3000/videos/welcome') {
+		$.prettyPhoto.open('http://www.youtube.com/watch?v=V4Fmwv7A2ic&amp;rel=0','Title Insurance Explained','Title Insurance Explained');
+	}
+
 });
 
 
