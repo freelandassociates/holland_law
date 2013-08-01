@@ -151,3 +151,59 @@ h1, h2, h3 {
   width: 685px;
   float: left;
 }
+
+.dropdown1,
+.dropdown2,
+.dropdown3,
+.dropdown4 {
+  float:left;  
+  position:absolute;  
+  left:-999em; /* Hides the drop down */  
+  background-color: #DDE6D7;
+}
+
+.dropdown1 {height: 110px; width: 180px;}  
+.dropdown2 {height: 420px; width: 380px;}  
+.dropdown3 {height: 500px; width: 820px;}  
+.dropdown4 {height: 420px; width: 880px;} 
+
+#menu li:hover .dropdown1 {  
+    left:-1px;  
+    top:auto;  
+}
+
+#menu li:hover .dropdown2 {  
+    left:-1px;  
+    top:auto;  
+} 
+
+#menu li:hover .dropdown3 {  
+    left:-260px;  
+    top:auto;  
+}
+
+#menu li:hover .dropdown4 {  
+    left:-500px;  
+    top:auto;  
+} 
+
+#dropdown3_1 {
+  float: left;
+  // border: 1px solid blue;
+  height: 50px;
+  width: 350px;
+}
+
+#dropdown3_2 {
+  float: left;
+  // border: 1px solid blue;
+  height: 50px;
+  width: 440px;
+}
+
+#dropdown4_1 {
+  float: left;
+  // border: 1px solid blue;
+  height: 140px;
+  width: 290px;
+}

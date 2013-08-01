@@ -94,6 +94,7 @@
     display: block;
     float: left;
 }
+
 .clearfix {
     float: none;
     clear: both;
@@ -122,7 +123,8 @@ body.home {
 
 
 a {
-	color:#efffa7;
+	/*color:#efffa7;*/
+	color:#6d8b1b;
 	text-decoration:none;
 }
 a:hover {
@@ -677,18 +679,20 @@ table .width25 {
 	display:inline;
 	position:relative;
 }
+
 #bar ul li a {
-	color:#6d8b1b;
+	/*color:#6d8b1b;*/
 	text-decoration:none;
 	font-weight:bold;
-	font-size:1em;
 	padding:0 30px;
 	padding:0 20px\9;
  *padding:0 20px;
 }
-.cufon-ready #bar ul li a {
+
+/*.cufon-ready #bar ul li a {
 	font-size:1.1em;
 }
+*/
 #bar ul li a.current, #bar ul li a:hover {
 	color:#433b36;
 	text-decoration:none;
@@ -735,6 +739,7 @@ table .width25 {
 .contact-form label {
 	font-weight:bold;
 }
+
 #bar ul li ul li {
 	padding:0px;
 	display:block;
@@ -761,11 +766,28 @@ table .width25 {
 	color:#433b36;
 }
 
+.menu_top_level {
+	clear: both;
+	display: inline-block;
+}
 
-#bar ul li ul li a.menu_second_level {
-	/*color: red;*/
+.menu_first_level {
+	/*border: 1px solid red;*/
+	clear: both;
+	float: left;
+	display: inline-block;
+	padding-left: 10px;
+}
+
+/*#bar ul li ul li a.menu_second_level {*/
+.menu_second_level {
+	/*border: 1px solid yellow;*/
+	clear: both;
+	float: left;
+	display: block;
 	font-size: 13px;
-	line-height: 16px;
+	line-height: 20px;
+	margin-left: 20px;
 	padding-left: 20px;
 	padding-top: 0px;
 	padding-bottom: 4px;
