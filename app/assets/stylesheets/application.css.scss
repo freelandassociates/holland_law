@@ -30,34 +30,6 @@ $container-border-color: brown;
 $container-border-width: 1px;
 
 
-
-// body, #page_container {
-//     min-height: 800px;
-//     width: 1024px;
-// }
-
-// body {
-//     right: 50%;
-//     position: absolute;
-// }
-
-// #page_container {
-//     left: 48%;
-//     position: relative;
-// //    background: $container-color;
-// //    border-left: $container-border-width solid $dark;
-// //    border-right: $container-border-width solid $dark;
-//     padding: 0px;
-// }
-
-
-// body {
-//   font-family: $georgia;
-//   font-size: 16px;
-//   margin: 0;
-// //  background-image: url(/assets/parchment.png);
-// }
-
 body div footer {
   height:32px;
   // border:1px solid #292929;
@@ -102,6 +74,30 @@ h1, h2, h3 {
   color: $light;
   text-decoration: none;
   font-weight: lighter;
+}
+
+#rooflogo {
+  position: relative;
+}
+
+#applogo {
+  position: absolute;
+  top: 0px;
+  left: 5px; 
+}
+
+#leftarrow {
+  position: absolute;
+  top: 5px;
+  left: 80px;   
+}
+
+#apptext {
+  position: absolute;
+  top: 14px;
+  left: 132px;
+  font-size: 1.1em;
+  letter-spacing: -1px;
 }
 
 #menu ul li {
