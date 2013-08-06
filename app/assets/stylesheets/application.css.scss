@@ -80,10 +80,16 @@ h1, h2, h3 {
   position: relative;
 }
 
+#app {
+  position: relative; 
+  width: 700px;
+  height: 75px;
+}
+
 #applogo {
   position: absolute;
   top: 0px;
-  left: 5px; 
+  left: 0px; 
 }
 
 #leftarrow {
@@ -98,6 +104,35 @@ h1, h2, h3 {
   left: 132px;
   font-size: 1.1em;
   letter-spacing: -1px;
+  width: 550px;
+}
+
+#officeaddress {
+  clear: both;
+}
+
+#officeaddress h2 {
+  margin: 0px;
+}
+
+#officeaddress div p {
+  margin: 0px 0px 10px 0px;
+}
+
+#corinthoffice {
+  font-size: 15px;
+  width: 220px;
+  float: left;
+}
+
+#dentonoffice {
+  font-size: 15px;
+  width: 220px;
+  float: left;
+}
+
+.ppt[style] {
+    display: none !important;
 }
 
 #menu ul li {

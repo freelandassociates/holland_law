@@ -33,7 +33,8 @@ $(document).ready(function () {
 
 	$("a[rel^='prettyPhoto']").prettyPhoto({
 		default_width: 800,
-		default_height: 544
+		default_height: 544,
+		social_tools: false
 	});
 
 	$("#carousel_items").carouFredSel({
