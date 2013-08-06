@@ -8,7 +8,6 @@
     </style>
     <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <script type="text/javascript" src="../javascripts/markerwithlabel.js"></script>
- 
 
  <style type="text/css">
    .maplabels {
@@ -23,6 +22,8 @@
      white-space: nowrap;
    }
  </style>
+
+ <link href="/assets/application.css" media="screen" rel="stylesheet" type="text/css" />
 
   </head>
   <body>
@@ -82,8 +83,40 @@
       }
       // google.maps.event.addDomListener(window, ‘load’, initialize);
       // $(document).ready(function() {
-          initialize();
+      initialize();
       // });
     </script>
+    <div id="mapofficedetailsouter" style="position: absolute; right: 18px; top: 46px; overflow: visible; height: 415px; width: 240px; border-style: solid; border-width: 1px; border-color: #EEEEEE; background: white;">
+      <div id="mapofficedetailsinner" style="position: relative; left: 4px; top: 4px; overflow: visible; height: 395px; width: 220px; border-style: solid; border-width: 1px; border-color: #DDDDDD; background: #EEEEEE;">
+        <div id="mapcorinthofficedetails">
+          <h1>CORINTH OFFICE</h1>
+          <p>4251 Fm 2181 Suite 200</p>
+          <p>Corinth</p>
+          <p>TX 76210</p>
+          <p>&nbsp;</p>
+          <p>Phone: 940 312 7345</p>
+          <p>Fax: 940 312 7346</p>
+          <form action="http://maps.google.com/maps" method="get" target="_blank">
+            <input type="hidden" name="daddr" value="4251 Farm to Market 2181 #200, Corinth, TX 76210" />
+            <input type="submit" value="Get Directions" />
+          </form>
+          <p>&nbsp;</p>
+        </div>
+        <div id="mapdentonofficedetails">
+          <h1>DENTON OFFICE</h1>
+          <p>525 South Locust Street Suite 100</p>
+          <p>Denton</p>
+          <p>TX 76201</p>
+          <p>&nbsp;</p>
+          <p>Phone: 940 312 7345</p>
+          <p>Fax: 940 312 7346</p>
+          <form action="http://maps.google.com/maps" method="get" target="_blank">
+            <input type="hidden" name="daddr" value="525 S Locust St #100, Denton, TX 76201" />
+            <input type="submit" value="Get Directions" />
+          </form>
+          <p>&nbsp;</p>          
+        </div>
+      </div>
+    </div>
   </body>
 </html>

@@ -127,13 +127,32 @@ h1, h2, h3 {
 
 #dentonoffice {
   font-size: 15px;
-  width: 220px;
+  width: 250px;
   float: left;
 }
 
 .ppt[style] {
     display: none !important;
 }
+
+
+#mapofficedetailsinner {
+  padding: 5px;
+  font-family: arial;
+  color: #000;
+}
+
+#mapofficedetailsinner h1 {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+#mapofficedetailsinner p {
+  font-size: 11px;
+  margin: 3px 0px 3px 0px;
+}
+
+
 
 #menu ul li {
   z-index: 10;
