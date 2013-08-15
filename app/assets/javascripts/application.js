@@ -42,9 +42,9 @@ $(document).ready(function () {
 		items: 3
 	});
 
-	if (window.location.href == 'http://pelican.holland-law-and-title.c66.me/' || window.location.href == 'http://www.hollandlawandtitle.com/' || window.location.href == 'http://localhost:3000/') {
-		$.prettyPhoto.open('http://www.youtube.com/watch?v=5eLCpcXw_J4&rel=0','Holland Law and Title - Lawyers Agent App','Holland Law and Title - Lawyers Agent App');
-	}
+	// if (window.location.href == 'http://pelican.holland-law-and-title.c66.me/' || window.location.href == 'http://www.hollandlawandtitle.com/' || window.location.href == 'http://localhost:3000/') {
+	// 	$.prettyPhoto.open('http://www.youtube.com/watch?v=5eLCpcXw_J4&rel=0','Holland Law and Title - Lawyers Agent App','Holland Law and Title - Lawyers Agent App');
+	// }
 
 	if (window.location.href == 'http://pelican.holland-law-and-title.c66.me/welcome' || window.location.href == 'http://www.hollandlawandtitle.com/welcome' || window.location.href == 'http://localhost:3000/welcome') {
 		$.prettyPhoto.open('http://www.youtube.com/watch?v=V4Fmwv7A2ic&rel=0','Title Insurance Explained','Title Insurance Explained');

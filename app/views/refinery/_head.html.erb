@@ -1,9 +1,9 @@
 <head>
   <meta charset='<%= Rails.application.config.encoding %>' />
   <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
-  <title><%= browser_title(yield(:title)) %></title>
-  <%= raw %(<meta name="description" content="#{@meta.meta_description}" />) if @meta.meta_description.present? -%>
-  <%= raw %(<meta name="keywords" content="#{@meta.meta_keywords}">) if @meta.meta_keywords.present? -%>
+  <title>Holland Law and Title - Title Insurance for Denton, Corinth, Wise, Collin, Dallas, Tarrant, Ellis and Parker County</title>
+  <meta name="description" content="Holland Law and Title provide personal and professional Title Insurance services for Denton, Wise, Collin, Dallas, Tarrant, Ellis and Parker counties.  They are a fee office for Lawyer's Title, and part of the Fidelity National Financial family, the largest title insurance and escrow services company in the world." />
+  <meta name="keywords" content="Title Insurance Denton Corinth Wise Dallas Tarrant Ellis Parker County">
   <%= raw %(<link rel="canonical" content="#{@canonical}" />) if @canonical.present? -%>
   <%= csrf_meta_tags if Refinery::Core.authenticity_token_on_frontend -%>
   <%= yield :meta %>
