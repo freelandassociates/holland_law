@@ -45,6 +45,6 @@ production:
   encoding: unicode
   database: holland
   pool: 5
-  host: 198.211.102.221
+  host: 198.211.101.221
   username: hollanddb
   password: lawtitle
