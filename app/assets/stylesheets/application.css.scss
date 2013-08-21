@@ -341,17 +341,19 @@ h1, h2, h3 {
 .dropdown1,
 .dropdown2,
 .dropdown3,
-.dropdown4 {
+.dropdown4,
+.dropdown5 {
   float:left;  
   position:absolute;  
   left:-999em; /* Hides the drop down */  
   background-color: #DDE6D7;
 }
 
-.dropdown1 {height: 130px; width: 180px;}  
+.dropdown1 {height: 110px; width: 180px;}  
 .dropdown2 {height: 420px; width: 380px;}  
 .dropdown3 {height: 500px; width: 820px;}  
 .dropdown4 {height: 420px; width: 880px;} 
+.dropdown5 {height: 30px; width: 180px;}  
 
 #menu li:hover .dropdown1 {  
     left:-1px;  
@@ -370,6 +372,11 @@ h1, h2, h3 {
 
 #menu li:hover .dropdown4 {  
     left:-500px;  
+    top:auto;  
+} 
+
+#menu li:hover .dropdown5 {  
+    left:-1px;  
     top:auto;  
 } 
 
