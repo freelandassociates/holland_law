@@ -29,6 +29,20 @@ $container-color: #FBF4E5;
 $container-border-color: brown;
 $container-border-width: 1px;
 
+#scoop_it_feed img {
+  width: 80px;
+  height: 80px;
+  float: left;
+  display: inline-block;
+}
+
+.rssincl-itemdesc {
+  max-width: 300px;
+  max-height: 100px;
+  float: left;
+  display: inline-block;
+}
+
 #email_label {
   font-size: 12px !important;
   padding-bottom: 5px !important;
@@ -380,7 +394,7 @@ h1, h2, h3 {
 } 
 
 #menu li:hover .dropdown5 {  
-    left:-1px;  
+    left:-73px;  
     top:auto;  
 } 
 
