@@ -1,4 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!-- This is only used for the /blog page as the others pages are delegated to the "home" or "show" pages. -->
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 
     <!-- BC_OBNW -->
@@ -10,6 +13,7 @@
 <link href="/stylesheets/ModuleStyleSheets.css" type="text/css" rel="StyleSheet" />
 <script type="text/javascript">var jslang='EN';</script>
 <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/main.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/blog.css" />
 <script type="text/javascript" src="/js/jquery-1.4.1.min.js"></script>
 <!-- <script type="text/javascript" src="/js/jquery.colorbox-min.js"></script> -->
 <script type="text/javascript" src="/js/jquery.cycle.js"></script>
@@ -42,16 +46,15 @@ We are a fee office for Lawyer's Title, and are a part of the Fidelity National 
 
 </div>
 
-<%= render(:partial => "/refinery/pages/banner_partial") %>
+<!-- %= render(:partial => "/refinery/pages/banner_partial") %> -->
     
         <div id="main">
-        <h1 class="large">Holland Law and Title</h1>
+<!--         <h1 class="large">Holland Law and Title Blog</h1>
         <div class="hr thin bottom-margin">
         <hr />
-        </div>
+        </div> -->
         
         <!-- %= render "/refinery/side_menu" %> -->
-
 <%= render_content_page(@page, {
       :hide_sections => local_assigns[:hide_sections],
       :can_use_fallback => !local_assigns[:show_empty_sections] && !local_assigns[:remove_automatic_sections]
@@ -64,7 +67,7 @@ We are a fee office for Lawyer's Title, and are a part of the Fidelity National 
     </div>
 </div>
         
-<%= render(:partial => "/refinery/pages/footer_partial") %>
+<!-- %= render(:partial => "/refinery/pages/footer_partial") %> -->
   
 </body>
 </html>

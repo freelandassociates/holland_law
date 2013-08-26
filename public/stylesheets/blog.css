@@ -1,0 +1,22 @@
+section#body {
+  background-color: #E4EFD5;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 15px;
+  height: 594px;
+  width: 753px;
+  opacity: 1.0 !important;
+  color: #433b36;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  float: right;
+}
+
+body.home {
+  /*background:#93BF39;*/
+  background:#ACBE83;
+  /*background:#FDFDFD;*/
+  /*background-size: contain;*/
+  /*background-size: 1280px 800px;*/
+  /*background-size: 1024px 678px;*/
+}

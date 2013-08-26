@@ -29,11 +29,40 @@ $container-color: #FBF4E5;
 $container-border-color: brown;
 $container-border-width: 1px;
 
-#scoop_it_feed img {
-  width: 80px;
-  height: 80px;
-  float: left;
+#scoop_it_feed {
+  width: 475px;
+  // height: 80px;
+  // float: left;
+  // border: 1px solid red;
   display: inline-block;
+  .gfg-horizontal-root {
+    padding: 0px 0px 0px 0px;
+    margin:  0px 0px 0px 0px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
+  .gfg-title {
+    font-weight: bold;
+    font-size: 11px;
+    color: black;
+    padding: 2px 5px 0px 3px;
+    width: 45px;
+    height: 100%;
+  }
+  .gfg-entry {
+    font-size: 11px;
+    padding: 2px 0px 0px 2px;
+    height: 100%;
+    // white-space: pre-wrap;      /* CSS3 */   
+    // white-space: -moz-pre-wrap; /* Firefox */    
+    // white-space: -pre-wrap;     /* Opera <7 */   
+    // white-space: -o-pre-wrap;   /* Opera 7 */    
+    // word-wrap: break-word;      /* IE */
+  }
+}
+
+div .gfg-branding {
+  display: none;
 }
 
 .rssincl-itemdesc {
@@ -70,6 +99,20 @@ h1#body_content_title {
   display: none;
 }
 
+section#side_body {
+  width: 170px;
+  height: 594px !important;
+  float: left;
+  background-color: #E4EFD5;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 418px;
+  // opacity: 0.9;
+  color: #433b36;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
 #side_body h1 {
   font-size: 34px;
   margin-top: 15px;
@@ -85,8 +128,14 @@ h1#body_content_title {
 #side_body p {
   margin-top: 0px;
   margin-bottom: 5px;
-  font-size: 14px;
+  font-size: 13px;
 }
+
+#side_body a {
+  font-size: 13px;
+}
+
+
 
 section#side_body div ul {
   margin-top: 0px;
@@ -95,7 +144,7 @@ section#side_body div ul {
   li {
     margin-left: 0px;
     margin-top: 2px;
-    font-size: 14px;
+    font-size: 13px;
   }
 }
 
@@ -118,19 +167,6 @@ section#body {
 }
 
 
-section#side_body {
-  width: 250px;
-  float: left;
-  background-color: #E4EFD5;
-  padding-left: 15px;
-  padding-right: 15px;
-  height: 418px;
-  opacity: 0.9;
-  color: #433b36;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-}
-
 article.blog_post {
   border: 1px solid #6d8b1b;
   margin-top: 10px;
@@ -146,6 +182,7 @@ article.blog_post {
   p {
     font-size: 13px;
     margin-bottom: 5px;
+    margin-right: 5px;
   }
   footer {
     p, aside {
@@ -410,4 +447,9 @@ h1, h2, h3 {
   // border: 1px solid blue;
   height: 140px;
   width: 290px;
+}
+
+footer p {
+  color: black;
+  font-size: 12px;
 }
