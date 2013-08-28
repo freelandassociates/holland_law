@@ -39,13 +39,30 @@
     function OnLoad() {
       var feeds = [
         {
-          title: 'Real Estate',
+          title: 'Texas Real Estate Blog',
+          url: 'http://www.scoop.it/t/texas-real-estate-blog/rss.xml'
+        },
+        {
+          title: 'Real Estate Marketing',
+          url: 'http://www.scoop.it/t/real-estate-marketing-by-john-holland1/rss.xml'
+        },
+        {
+          title: 'North Texas Real Estate',
           url: 'http://www.scoop.it/t/north-texas-real-estate/rss.xml'
+        },
+        {
+          title: 'Realtor Productivity Tools',
+          url: 'http://www.scoop.it/t/consumer-services/rss.xml'
+        },
+        {
+          title: 'Money Matters',
+          url: 'http://www.scoop.it/t/texas-lending/rss.xml'
         }
       ];
     
       var options = {
         horizontal : true,
+        numResults : 1,
         title : "Scoop.it:"
       };
     
