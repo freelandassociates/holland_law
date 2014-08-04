@@ -40,7 +40,7 @@ gem 'jquery-rails', '~> 2.0.0'
 gem 'jquery-ui-rails'
 gem 'prettyphoto-rails'
 
-# gem 'caroufredsel-rails', :git => 'git://github.com/johnbintz/caroufredsel-rails.git'
+gem 'caroufredsel-rails', :git => 'git://github.com/johnbintz/caroufredsel-rails.git'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
