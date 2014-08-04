@@ -7,9 +7,11 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+gem 'pg'
+
 group :development, :test do
   # gem 'sqlite3'
-  gem 'pg'
+  # gem 'pg'
 	
 	gem 'better_errors'
 	gem 'binding_of_caller'
@@ -17,7 +19,7 @@ group :development, :test do
 end
 
 group :production do
-  gem 'pg'
+  # gem 'pg'
   gem 'net-scp', '1.0.4'
   gem 'fog'
 end
