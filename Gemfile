@@ -42,6 +42,8 @@ gem 'prettyphoto-rails'
 
 gem 'caroufredsel-rails', :git => 'git://github.com/johnbintz/caroufredsel-rails.git'
 
+gem 'paperclip', "~> 3.1"
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
