@@ -33,6 +33,9 @@ module Refinery
       attr_accessible :title, :body, :custom_teaser, :tag_list, :draft, :published_at, :custom_url, :author
       attr_accessible :browser_title, :meta_keywords, :meta_description, :user_id, :category_ids
       attr_accessible :source_url, :source_url_title
+      attr_accessible :item
+
+      has_attached_file :item, :styles => { :medium => "300x300>", :thumb => "100x100>" }
 
       self.per_page = Refinery::Blog.posts_per_page
 

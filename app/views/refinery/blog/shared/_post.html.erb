@@ -41,6 +41,9 @@
           <% end %>
         <% end %>
       </aside>
+      <% if !post.item.nil? %>
+        <%= image_tag post.item.url %>
+      <% end %>
     </footer>
   </article>
 <% end %>
