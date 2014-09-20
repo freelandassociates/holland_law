@@ -35,7 +35,7 @@ module Refinery
       attr_accessible :source_url, :source_url_title
       attr_accessible :item
 
-      has_attached_file :item, :styles => { :medium => "300x300>", :thumb => "100x100>" }
+      has_attached_file :item
 
       self.per_page = Refinery::Blog.posts_per_page
 
