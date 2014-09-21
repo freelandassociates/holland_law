@@ -2,7 +2,9 @@
 <% if post.live? %>
   <figure>
     <% if !post.item.nil? %>
-      <%= image_tag post.item.url %>
+      <!-- %= image_tag post.item.url %> -->
+      <img src="<%= post.item.url %>">
+      <!-- <img src="/system/refinery/blog/posts/items/000/000/006/original/IMG_0120.JPG"> -->
     <% end %>
     <figcaption>
       <%= link_to post.title, refinery.blog_post_path(post) %>
