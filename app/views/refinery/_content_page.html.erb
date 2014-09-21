@@ -34,39 +34,35 @@ We are a fee office for Lawyer's Title, and are a part of the Fidelity National 
 </head>
 
 <body class="home">
-
     
-        <div id="body_outer_wrapper">
-        <div class="outer-wrapper">
-        <div class="inner-wrapper">
-        <div id="bar">
+    <!-- <div id="body_outer_wrapper"> -->
+        <!-- <div class="outer-wrapper"> -->
+            <!-- <div class="inner-wrapper"> -->
+                <!-- <div id="bar">
+                    %= render(:partial => "/refinery/fixed_menu") %>
+                </div> -->
 
+                <!-- %= render(:partial => "/refinery/pages/banner_partial") %> -->
 
-<%= render(:partial => "/refinery/fixed_menu") %>
+                <div id="main">
+                    <!--         <h1 class="large">Holland Law and Title Blog</h1>
+                    <div class="hr thin bottom-margin">
+                    <hr />
+                    </div> -->
 
+                    <!-- %= render "/refinery/side_menu" %> -->
+                    <%= render_content_page(@page, {
+                        :hide_sections => local_assigns[:hide_sections],
+                        :can_use_fallback => !local_assigns[:show_empty_sections] && !local_assigns[:remove_automatic_sections]
+                    }) %>
+                    <%= render '/refinery/draft_page_message' unless @page.nil? or @page.live? -%>
+
+                </div>
+            <!-- </div> -->
+        <!-- </div> -->
+    <!-- </div> -->
 </div>
 
-<!-- %= render(:partial => "/refinery/pages/banner_partial") %> -->
-    
-        <div id="main">
-<!--         <h1 class="large">Holland Law and Title Blog</h1>
-        <div class="hr thin bottom-margin">
-        <hr />
-        </div> -->
-        
-        <!-- %= render "/refinery/side_menu" %> -->
-<%= render_content_page(@page, {
-      :hide_sections => local_assigns[:hide_sections],
-      :can_use_fallback => !local_assigns[:show_empty_sections] && !local_assigns[:remove_automatic_sections]
-    }) %>
-<%= render '/refinery/draft_page_message' unless @page.nil? or @page.live? -%>
-
-        </div>
-        </div>
-        </div>
-    </div>
-</div>
-        
 <!-- %= render(:partial => "/refinery/pages/footer_partial") %> -->
   
 </body>
