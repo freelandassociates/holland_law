@@ -1202,7 +1202,7 @@ ul.footer-nav li a:hover {
 	width:100%;
 	float:left;
 	overflow:visible;
-	padding:5px 0px;
+	/*padding:5px 0px;*/
 }
 #main a {
 	color: #433b36;
