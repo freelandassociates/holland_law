@@ -17,6 +17,9 @@
           <%= link_to (@post.source_url_title.blank? ? @post.source_url : @post.source_url_title), @post.source_url %>
         </div>
       <% end %>
+
+      <img src="<%= @post.item.url %>">
+      
       <% if (categories = @post.categories).any? %>
         <aside class='filed_in'>
           <%= t('filed_in', :scope => 'refinery.blog.posts.show') %>

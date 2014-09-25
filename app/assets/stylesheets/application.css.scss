@@ -392,20 +392,27 @@ footer p {
 // BLOG PAGE STUFF FROM HERE ON...
 
 section#body {
-  background-color: #93BF39;
+  // background-color: #93BF39;
+  background-color: #E4EFD5;
   height: 100%;
   width: 100%;
   color: #433b36;
   margin-top: 10px;
 }
 
-body.home {
-  /*background:#93BF39;*/
-  // background:#ACBE83;
-  /*background:#FDFDFD;*/
+// section#body.blog {
+//   background-color: #E4EFD5;
+//   height: 100%;
+//   width: 100%;
+//   color: #433b36;
+//   margin-top: 10px; 
+// }
+
+body.blog {
+  background:#93BF39 url(/images/hummingbird.jpg) top center no-repeat;
   /*background-size: contain;*/
-  /*background-size: 1280px 800px;*/
-  /*background-size: 1024px 678px;*/
+  background-size: 1280px 800px;
+  // background-size: 1024px 678px;
 }
 
 section#side_body {

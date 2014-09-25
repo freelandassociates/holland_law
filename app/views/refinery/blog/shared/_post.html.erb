@@ -1,13 +1,15 @@
 <!-- This is what is iterated around for each post in the blog.. -->
 <% if post.live? %>
   <figure>
-    <% if !post.item.nil? %>
-      <!-- %= image_tag post.item.url %> -->
-      <img src="<%= post.item.url %>">
-      <!-- <img src="/system/refinery/blog/posts/items/000/000/006/original/IMG_0120.JPG"> -->
-    <% end %>
-    <figcaption>
-      <%= link_to post.title, refinery.blog_post_path(post) %>
-    </figcaption>
+    <a href="<%= refinery.blog_post_path(post) %>">
+      <% if !post.item.nil? %>
+        <!-- %= image_tag post.item.url %> -->
+        <img src="<%= post.item.url %>">
+        <!-- <img src="/system/refinery/blog/posts/items/000/000/006/original/IMG_0120.JPG"> -->
+      <% end %>
+      <figcaption>
+        <%= link_to post.title, refinery.blog_post_path(post) %>
+      </figcaption>
+    </a>
   </figure>
 <% end %>
