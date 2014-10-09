@@ -20,6 +20,7 @@
 //= require_tree .
 
 $(document).ready(function () {
+
     $("#accordion").accordion({ collapsible: true });
     if (window.location.href.indexOf("rate-calculators")>-1) {
 		$("#accordion").accordion({ active: 2});

@@ -463,6 +463,32 @@ div#blogcolumns:hover figure:not(:hover) {
   opacity: 0.4;
 }
 
+article#blog_post {
+  margin: 10px;
+}
+
+div#blog_article_header {
+  width: 100%;
+  float: left;
+  margin-bottom: 10px;
+}
+
+div.blog_article_section {
+  width: 48%; 
+  // margin: px; 
+}
+
+div#blog_article_image {
+  float: left;
+}
+
+div#blog_article_text {
+  float: left;
+  margin-left: 2%;
+  font-size: 20px;
+}
+
+
 // section#side_body {
 //   width: 170px;
 //   height: 594px !important;
