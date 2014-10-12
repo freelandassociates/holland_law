@@ -1,15 +1,30 @@
 <!-- This is what is iterated around for each post in the blog.. -->
 <% if post.live? %>
   <figure>
-    <a href="<%= refinery.blog_post_path(post) %>">
       <% if !post.item.nil? %>
-        <!-- %= image_tag post.item.url %> -->
-        <img src="<%= post.item.url %>">
-        <!-- <img src="/system/refinery/blog/posts/items/000/000/006/original/IMG_0120.JPG"> -->
+        <a href="<%= refinery.blog_post_path(post) %>">
+          <figcaption>
+            <h2><%= post.title %></h2>
+          </figcaption>
+
+          <section class='clearfix'>
+            <% if blog_post_teaser_enabled? %>
+              <%= blog_post_teaser(post) %>
+            <% else %>
+              <%= post.body.html_safe %>
+            <% end %>
+          </section>
+          <div id="read_more">
+              <%= link_to t('read_more', :scope => 'refinery.blog.shared.posts'), refinery.blog_post_path(post) if blog_post_teaser_enabled? %>
+          </div>
+        </a>
+
+        <a href="<%= refinery.blog_post_path(post) %>">
+          <img src="<%= post.item.url %>">
+        </a>
+      
+
       <% end %>
-      <figcaption>
-        <%= link_to post.title, refinery.blog_post_path(post) %>
-      </figcaption>
-    </a>
+   
   </figure>
 <% end %>

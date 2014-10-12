@@ -454,9 +454,30 @@ div#blogcolumns figure {
 div#blogcolumns figure img {
   width: 100%;
   height: auto;
-  border-bottom: 1px solid #CCC;
-  padding-bottom: 15px;
+  // border-bottom: 1px solid #CCC;
+  // padding-bottom: 15px;
+  padding-top: 10px;
   margin-bottom: 5px;
+}
+
+div#blogcolumns figure a:hover {
+  color: #6d8b1b !important;
+}
+
+figcaption a {
+  font-size: 1.2em;
+}
+
+div#blogcolumns p {
+  font-size: 0.9em;
+  margin: 10px 0px -5px 0px;
+}
+
+
+div#read_more {
+  float:right;
+  color: #6B8D1D !important;
+  font-size: 0.75em;
 }
 
 div#blogcolumns:hover figure:not(:hover) {
