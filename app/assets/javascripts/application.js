@@ -53,4 +53,6 @@ $(document).ready(function () {
 
 });
 
+// Refresh Cufon on window resize..
+// jQuery(window).bind('resize', (function() { var timer; return function() { clearTimeout(timer); timer = setTimeout(function() { alert('Resized'); Cufon.refresh(); }, 50); }; })());
 

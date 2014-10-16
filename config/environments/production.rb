@@ -64,4 +64,25 @@ HollandLaw::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
+
+  config.middleware.use ExceptionNotification::Rack,
+    :email => {
+      :email_prefix => "[Whatever]",
+      :sender_address => %{"HLT" <noreply@hollandlawandtitle.com>},
+      :exception_recipients => %w{paul.simpsonparry@freelandassociates.com}
+    }
+
+  # Configure mail delivery methods
+  config.action_mailer.delivery_method = :smtp
+
+  config.action_mailer.smtp_settings = {
+    :enable_starttls_auto => true,
+    :address => "smtp.mandrillapp.com",
+    :port => 587,
+    :domain => "freelandassociates.com",
+    :authentication => :login,
+    user_name: "paul.simpsonparry@freelandassociates.com",
+    password: "la3Q5WyeRCIqgGScWM22yA"
+  }
+
 end

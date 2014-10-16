@@ -76,3 +76,7 @@ gem 'bourbon'
 gem 'newrelic_rpm'
 
 # gem 'rack-mini-profiler'
+
+gem 'exception_notification'
+
+gem 'letter_opener', group: :development

@@ -424,16 +424,29 @@ section#side_body {
   column-gap: 15px;
   width: 90%;
   max-width: 1100px;
-  margin: 25px auto;
+  margin: 25px;
+}
+
+#p_blog_title {
+  font-family: verdana;
+  font-size: 3em;
+  text-align: center;
+  margin-bottom: 2px;
 }
 
 @media screen and (max-width: 550px) {
-  #blogcolumns { column-gap: 0px }
-  #blogcolumns figure { width: 100% }
+  #blogcolumns {  column-gap: 0px; 
+                  margin: 0px;
+                  width: 100%; }
+  // #blogcolumns figure { width: 100% }
+  #blog_title { display: none; }
+  #p_blog_title { position: absolute; }
+  div #rooflogo { opacity: 0.3; }
 }
 
 @media screen and (min-width: 551px) {
   #blogcolumns figure { max-width: 400px }
+  #p_blog_title { display: none; }
 }
 
 

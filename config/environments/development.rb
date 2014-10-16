@@ -34,4 +34,14 @@ HollandLaw::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  config.middleware.use ExceptionNotification::Rack,
+    :email => {
+      :email_prefix => "[Whatever]",
+      :sender_address => %{"HLT" <noreply@hollandlawandtitle.com>},
+      :exception_recipients => %w{paul.simpsonparry@freelandassociates.com}
+    }
+
+  config.action_mailer.delivery_method = :letter_opener
+
 end
