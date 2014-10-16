@@ -11,6 +11,7 @@
     <header>
       <h1><%= @post.title %></h1>
       <section class='details'>
+        <div id="blog_back_link"><a href="/blog">Back to Blog</a></div>
         <time datetime="<%=l @post.published_at.to_date, :format => :default %>" class='posted_at'>
           <%= t('created_at', :scope => 'refinery.blog.shared.posts', :when => l(@post.published_at.to_date, :format => :short)) %>
         </time>

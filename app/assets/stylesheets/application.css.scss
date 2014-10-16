@@ -507,10 +507,16 @@ div#blog_article_header {
   margin-bottom: 10px;
 }
 
-div.blog_article_section {
-  width: 48%; 
-  // margin: px; 
+div#blog_back_link a {
+  font-size: 1.4em;
+  float: right;
+  color: #6d8b1b !important;
 }
+
+// div.blog_article_section {
+//   width: 48%; 
+//   // margin: px; 
+// }
 
 div#blog_article_image {
   float: left;
@@ -521,6 +527,17 @@ div#blog_article_text {
   margin-left: 2%;
   font-size: 20px;
 }
+
+@media screen and (max-width: 550px) {  
+  div#blog_article_image { width: 100%; }
+  div#blog_article_text { width: 95%; }
+}
+
+@media screen and (min-width: 551px) {
+  div#blog_article_image { width: 48%; }
+  div#blog_article_text { width: 48%; }
+}
+
 
 
 // section#side_body {
