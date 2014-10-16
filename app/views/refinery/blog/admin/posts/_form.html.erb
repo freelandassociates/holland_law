@@ -10,10 +10,16 @@
     <%= f.text_field :title, :class => 'larger widest' -%>
   </div>
 
-  <div class='field'>
-    <%= f.file_field :item %>
-  </div>
-
+  <!-- Condition this div to only appear if in "new" mode.. -->
+  <% if @post.new_record? %>
+    <div class='field'>
+      <%= f.file_field :item %>
+    </div>
+  <!-- Otherwise, show a thumbnail of the image.. -->
+  <% else %>
+    <img src="<%= @post.item %>" height=200>
+  <% end %>
+  
   <div class='field'>
     <div id='page-tabs' class='clearfix ui-tabs ui-widget ui-widget-content ui-corner-all'>
       <ul id='page_parts'>
