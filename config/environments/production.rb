@@ -85,4 +85,6 @@ HollandLaw::Application.configure do
     password: "la3Q5WyeRCIqgGScWM22yA"
   }
 
+  config.action_dispatch.ip_spoofing_check = false
+  
 end
