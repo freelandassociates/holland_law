@@ -538,7 +538,13 @@ div#blog_article_text {
   div#blog_article_text { width: 48%; }
 }
 
+section#body_content {
+  // display: inherit !important;
+}
 
+section#body {
+  // display: inherit !important;
+}
 
 // section#side_body {
 //   width: 170px;

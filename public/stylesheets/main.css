@@ -78,6 +78,7 @@
 	color: #433b36;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
+	overflow: scroll;
 }
 
 #railscontent h1 {
@@ -87,7 +88,7 @@
 
 #body {
 	height: 328px;
-	overflow: scroll;
+/*	overflow: scroll;*/
 }
 
 
