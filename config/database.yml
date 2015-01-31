@@ -14,7 +14,7 @@ development:
   encoding: unicode
   database: holland_development
   pool: 5
-  username: Paul
+  username: paul
   password: caffreys
 
 # Warning: The database defined as "test" will be erased and
@@ -31,7 +31,7 @@ test:
   encoding: unicode
   database: holland_test
   pool: 5
-  username: Paul
+  username: paul
   password: caffreys
 
 # production:
