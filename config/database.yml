@@ -46,5 +46,5 @@ production:
   database: holland
   pool: 5
   host: 198.211.101.221
-  username: hollanddb
+  username: holland
   password: lawtitle
