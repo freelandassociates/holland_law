@@ -9,6 +9,8 @@ gem 'rails', '3.2.13'
 
 gem 'pg'
 
+gem 'nokogiri', '1.5.11'
+
 group :development, :test do
   # gem 'sqlite3'
   # gem 'pg'

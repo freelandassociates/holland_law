@@ -290,6 +290,7 @@ DEPENDENCIES
   meta_request
   net-scp (= 1.0.4)
   newrelic_rpm
+  nokogiri (= 1.5.11)
   paperclip (~> 3.1)
   pg
   prettyphoto-rails
